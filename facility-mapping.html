@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polysense Solutions</title>
+    <link rel="stylesheet" href="styles/output.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/form-logo.png" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-b from-blue-50 tracking-tight text-black"
+  >
+    <div id="navbar"></div>
+    <!-- Solutions Hover Menu -->
+    <div
+      onmouseover="slideSolutionsNavIn()"
+      onmouseout="slideSolutionsNavOut()"
+      id="solutions-nav"
+      class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex"
+    >
+      <ul
+        class="flex flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:translate-x-16"
+      >
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/for-labs-and-hospitals.html"
+            >For Labs & Hospitals</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/for-additive-manufacturing.html"
+            >For Additive Manufacturing</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out hover:text-green-500"
+            href="/for-manufacturing-and-industrial-facilities.html"
+            >For Manufacturing and Industrial Facilities</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/facility-mapping.html"
+            >Facility Mapping</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/inventory-management.html"
+            >Inventory Management</a
+          >
+        </li>
+
+        <li class="w-full hover:text-green-500" onclick="closeNav()">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/case-study.html"
+            onclick="closeNav()"
+            >Case Study</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- About Hover Menu -->
+    <div
+      onmouseover="slideIn()"
+      onmouseout="slideOut()"
+      id="about-nav"
+      class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex"
+    >
+      <ul
+        class="flex w-[12rem] flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:-ml-24 lg:translate-x-16"
+      >
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/about-us.html"
+            >About Us</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/leadership.html"
+            >Leadership</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/investors.html"
+            >Investors</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/careers.html"
+            >Careers</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/news.html"
+            >News</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Side Navigation -->
+    <div
+      id="sidenav"
+      class="fixed top-0 z-[100] h-[120vh] w-full translate-x-full overflow-x-hidden duration-300 ease-in-out md:hidden"
+    >
+      <nav
+        id="click-outside"
+        class="relative top-0 flex h-full items-start justify-end md:hidden"
+      >
+        <img
+          onclick="closeNav()"
+          src="assets/navbar/close.svg"
+          alt="close"
+          width="20"
+          height="20"
+          class="absolute right-7 top-7 sm:right-10"
+        />
+        <div
+          onclick="closeNav()"
+          class="flex h-full w-1/4 flex-col items-start px-[10%] font-medium backdrop-blur-sm"
+        ></div>
+        <ul
+          class="flex h-full w-3/4 flex-col items-start gap-2 border-l border-green-200 bg-white px-[10%] py-14 text-sm font-medium"
+        >
+          <li>
+            <a
+              href="/"
+              onclick="closeNav()"
+              class="text-lg duration-300 hover:text-green-500"
+              >Home</a
+            >
+          </li>
+          <li class="flex flex-col">
+            <p id="about" class="text-lg text-black/50">About</p>
+            <div class="py-3 text-start">
+              <ul class="flex flex-col gap-3">
+                <li>
+                  <a
+                    href="/about-us.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/leadership.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Leadership</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/investors.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Investors</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/careers.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/news.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >News</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-col">
+            <p id="solutions" class="text-lg text-black/50">Solutions</p>
+            <div class="py-3 text-start">
+              <ul class="flex flex-col gap-3">
+                <li>
+                  <a
+                    href="/for-labs-and-hospitals.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Labs & Hospitals</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/for-additive-manufacturing.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Additive Manufacturing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/for-manufacturing-and-industrial-facilities.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Manufacturing and Industrial Facilities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/inventory-management.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Inventory Management</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/facility-mapping.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Facility Mapping</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/case-study.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Case Study</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a
+              href="/contact.html"
+              class="text-lg duration-300 hover:text-green-500"
+              >Contact</a
+            >
+          </li>
+
+          <li>
+            <a href="contact.html" class="duration-300 ease-in-out"
+              ><button
+                type="button"
+                class="flex items-center justify-center text-nowrap rounded-xl bg-green-400 px-4 py-2 font-medium text-white duration-300 ease-in-out hover:rounded-md hover:bg-green-500"
+              >
+                Request a demo
+              </button></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Content -->
+    <div class="px-6 pt-32 sm:px-10">
+      <div
+        class="flex w-full flex-col items-center justify-center gap-3 lg:flex-row"
+      >
+        <span class="lg:w-3/5"
+          ><h1
+            class="leading-12 pb-5 text-5xl font-bold tracking-tighter lg:text-6xl"
+            data-aos="fade-down"
+          >
+            Interactive
+            <span class="text-green-500">3D Facility Mapping</span>
+          </h1>
+          <p
+            class="w-[90%] pb-2 lg:text-lg"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            Navigate through a highly interactive 3D virtual tour that serves as
+            a dynamic map of your facility, giving you a visual representation
+            of all your assets, rooms, and workspaces.
+          </p>
+          <span class="flex items-center gap-10 py-3">
+            <img
+              src="assets/facility-mapping/3d-report.png"
+              alt="3d-report"
+              width="60"
+              height="60"
+              class="duration-300 hover:-translate-y-2"
+              data-aos="zoom-in" />
+            <img
+              src="assets/facility-mapping/discussion.png"
+              alt="3d-report"
+              width="60"
+              height="60"
+              class="duration-300 hover:-translate-y-2"
+              data-aos="zoom-in"
+              data-aos-delay="100" />
+            <img
+              src="assets/facility-mapping/presentation.png"
+              alt="3d-report"
+              width="60"
+              height="60"
+              class="duration-300 hover:-translate-y-2"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+          /></span>
+        </span>
+
+        <span
+          class="my-5 flex w-full items-center justify-center overflow-hidden rounded-3xl border shadow-2xl shadow-red-800/40 md:w-4/5 lg:w-1/2"
+          data-aos="zoom-in"
+          ><img
+            src="assets/facility-mapping/facility-mapping.png"
+            alt="inventory-management"
+            width="1000"
+            height="800"
+            class="w-full object-cover"
+        /></span>
+      </div>
+    </div>
+
+    <!-- Key Features -->
+    <section class="mt-12 py-20">
+      <p
+        class="pb-10 text-center text-4xl font-bold md:pb-14 md:text-5xl lg:text-6xl"
+        data-aos="fade-down"
+      >
+        Key Features
+      </p>
+      <section
+        class="flex flex-wrap items-center justify-center gap-5 overflow-hidden px-6 sm:px-10"
+      >
+        <div
+          class="flex h-40 max-w-lg flex-col items-start justify-center gap-1 border border-green-900/50 bg-green-100/10 p-5 text-sm duration-300 hover:-translate-y-1 md:h-48 md:text-base"
+          data-aos="fade-right"
+        >
+          <span class="flex items-center gap-3 pb-2">
+            <img
+              src="/assets/facility-mapping/real-time-strategy.png"
+              width="40"
+              height="40"
+              alt="downtime"
+            />
+            <h1 class="text-lg font-semibold tracking-wider md:text-xl">
+              Real-Time Asset Monitoring
+            </h1>
+          </span>
+          <p>
+            Click on any asset within the 3D tour to instantly view its current
+            status, performance metrics, and utilization data.
+          </p>
+        </div>
+        <!-- 2 -->
+        <div
+          class="flex h-40 max-w-lg flex-col items-start justify-center gap-1 border border-green-900/50 bg-green-100/10 p-5 text-sm duration-300 hover:-translate-y-1 md:h-48 md:text-base"
+          data-aos="fade-left"
+        >
+          <span class="flex items-center gap-3 pb-2">
+            <img
+              src="/assets/facility-mapping/directions.png"
+              width="40"
+              height="40"
+              alt="directions"
+            />
+            <h1 class="text-lg font-semibold tracking-wider md:text-xl">
+              On-Demand Directions
+            </h1>
+          </span>
+          <p>
+            Simplify asset accessibility by providing instant directions to any
+            selected machinery or workspace within the facility.
+          </p>
+        </div>
+        <!-- 3 -->
+        <div
+          class="flex h-40 max-w-lg flex-col items-start justify-center gap-1 border border-green-900/50 bg-green-100/10 p-5 text-sm duration-300 hover:-translate-y-1 md:h-48 md:text-base"
+          data-aos="fade-right"
+        >
+          <span class="flex items-center gap-3 pb-2">
+            <img
+              src="/assets/facility-mapping/precision.png"
+              width="40"
+              height="40"
+              alt="precision"
+            />
+            <h1 class="text-lg font-semibold tracking-wider md:text-xl">
+              Precision Planning
+            </h1>
+          </span>
+          <p>
+            Utilize the measuring tools within the 3D tour to assess distances
+            and sizes, aiding in precise planning for installations,
+            relocations, or expansions
+          </p>
+        </div>
+        <!-- 4 -->
+        <div
+          class="flex h-40 max-w-lg flex-col items-start justify-center gap-1 border border-green-900/50 bg-green-100/10 p-5 text-sm duration-300 hover:-translate-y-1 md:h-48 md:text-base"
+          data-aos="fade-left"
+        >
+          <span class="flex items-center gap-3 pb-2">
+            <img
+              src="/assets/facility-mapping/blueprint.png"
+              width="40"
+              height="40"
+              alt="blueprint"
+            />
+            <h1 class="text-lg font-semibold tracking-wider md:text-xl">
+              Virtual Blueprint Creation
+            </h1>
+          </span>
+          <p>
+            Generate accurate floor plans directly from the 3D model, which can
+            be invaluable for renovations, asset relocations, or future
+            expansions
+          </p>
+        </div>
+        <!-- 5 -->
+        <div
+          class="flex h-40 max-w-lg flex-col items-start justify-center gap-1 border border-green-900/50 bg-green-100/10 p-5 text-sm duration-300 hover:-translate-y-1 md:h-48 md:text-base"
+          data-aos="fade-right"
+        >
+          <span class="flex items-center gap-3 pb-2">
+            <img
+              src="/assets/facility-mapping//cloud-network.png"
+              width="40"
+              height="40"
+              alt="cloud network"
+            />
+            <h1 class="text-lg font-semibold tracking-wider md:text-xl">
+              Multi-Location Support
+            </h1>
+          </span>
+          <p>
+            For businesses with multiple facilities, switch between 3D models of
+            different buildings or floors, centralizing your control and
+            monitoring efforts
+          </p>
+        </div>
+        <!-- 6 -->
+        <div
+          class="flex h-40 max-w-lg flex-col items-start justify-center gap-1 border border-green-900/50 bg-green-100/10 p-5 text-sm duration-300 hover:-translate-y-1 md:h-48 md:text-base"
+          data-aos="fade-left"
+        >
+          <span class="flex items-center gap-3 pb-2">
+            <img
+              src="/assets/facility-mapping/energy-system.png"
+              width="40"
+              height="40"
+              alt="energy system"
+            />
+            <h1 class="text-lg font-semibold tracking-wider md:text-xl">
+              Off-Site Control
+            </h1>
+          </span>
+          <p>
+            With remote access capabilities, you can tour your facility and
+            monitor assets in real-time from anywhere in the world, ensuring
+            uninterrupted operational control.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <footer id="footer" data-aos="fade-up"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Animation occurs only once
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

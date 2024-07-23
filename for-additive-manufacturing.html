@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polysense Solutions</title>
+    <link rel="stylesheet" href="styles/output.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/form-logo.png" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-b from-blue-50 tracking-tight text-black"
+  >
+    <div id="navbar"></div>
+    <!-- Solutions Hover Menu -->
+    <div
+      onmouseover="slideSolutionsNavIn()"
+      onmouseout="slideSolutionsNavOut()"
+      id="solutions-nav"
+      class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex"
+    >
+      <ul
+        class="flex flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:translate-x-16"
+      >
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/for-labs-and-hospitals.html"
+            >For Labs & Hospitals</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/for-additive-manufacturing.html"
+            >For Additive Manufacturing</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out hover:text-green-500"
+            href="/for-manufacturing-and-industrial-facilities.html"
+            >For Manufacturing and Industrial Facilities</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/facility-mapping.html"
+            >Facility Mapping</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/inventory-management.html"
+            >Inventory Management</a
+          >
+        </li>
+
+        <li class="w-full hover:text-green-500" onclick="closeNav()">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/case-study.html"
+            onclick="closeNav()"
+            >Case Study</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- About Hover Menu -->
+    <div
+      onmouseover="slideIn()"
+      onmouseout="slideOut()"
+      id="about-nav"
+      class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex"
+    >
+      <ul
+        class="flex w-[12rem] flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:-ml-24 lg:translate-x-16"
+      >
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/about-us.html"
+            >About Us</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/leadership.html"
+            >Leadership</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/investors.html"
+            >Investors</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/careers.html"
+            >Careers</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/news.html"
+            >News</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Side Navigation -->
+    <div
+      id="sidenav"
+      class="fixed top-0 z-[100] h-[120vh] w-full translate-x-full overflow-x-hidden duration-300 ease-in-out md:hidden"
+    >
+      <nav
+        id="click-outside"
+        class="relative top-0 flex h-full items-start justify-end md:hidden"
+      >
+        <img
+          onclick="closeNav()"
+          src="assets/navbar/close.svg"
+          alt="close"
+          width="20"
+          height="20"
+          class="absolute right-7 top-7 sm:right-10"
+        />
+        <div
+          onclick="closeNav()"
+          class="flex h-full w-1/4 flex-col items-start px-[10%] font-medium backdrop-blur-sm"
+        ></div>
+        <ul
+          class="flex h-full w-3/4 flex-col items-start gap-2 border-l border-green-200 bg-white px-[10%] py-14 text-sm font-medium"
+        >
+          <li>
+            <a
+              href="/"
+              onclick="closeNav()"
+              class="text-lg duration-300 hover:text-green-500"
+              >Home</a
+            >
+          </li>
+          <li class="flex flex-col">
+            <p id="about" class="text-lg text-black/50">About</p>
+            <div class="py-3 text-start">
+              <ul class="flex flex-col gap-3">
+                <li>
+                  <a
+                    href="/about-us.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/leadership.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Leadership</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/investors.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Investors</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/careers.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/news.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >News</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-col">
+            <p id="solutions" class="text-lg text-black/50">Solutions</p>
+            <div class="py-3 text-start">
+              <ul class="flex flex-col gap-3">
+                <li>
+                  <a
+                    href="/for-labs-and-hospitals.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Labs & Hospitals</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/for-additive-manufacturing.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Additive Manufacturing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/for-manufacturing-and-industrial-facilities.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Manufacturing and Industrial Facilities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/inventory-management.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Inventory Management</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/facility-mapping.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Facility Mapping</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/case-study.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Case Study</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a
+              href="/contact.html"
+              class="text-lg duration-300 hover:text-green-500"
+              >Contact</a
+            >
+          </li>
+
+          <li>
+            <a href="contact.html" class="duration-300 ease-in-out"
+              ><button
+                type="button"
+                class="flex items-center justify-center text-nowrap rounded-xl bg-green-400 px-4 py-2 font-medium text-white duration-300 ease-in-out hover:rounded-md hover:bg-green-500"
+              >
+                Request a demo
+              </button></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Content -->
+    <div class="px-6 pt-20 text-3xl font-bold sm:px-10">
+      <section class="flex w-full flex-col gap-5 py-20">
+        <h1
+          class="leading-12 w-full text-balance text-center text-2xl font-semibold tracking-tighter sm:text-3xl md:text-5xl"
+          data-aos="fade-down"
+        >
+          <span class="text-green-500">Optimize</span> Your Additive
+          <br />Manufacturing Operations.
+        </h1>
+
+        <p
+          class="text-balance px-4 text-center text-base font-medium sm:px-10 sm:text-sm md:px-[8.5vw] md:text-lg"
+          data-aos="fade-down"
+          data-aos-delay="100"
+        >
+          No wiring or complicated install! <br />Installs in
+          <span class="font-semibold text-green-500">minutes</span>,
+          non-invasive monitoring system <br />
+          built specifically for additive manufacturing.
+        </p>
+      </section>
+
+      <section
+        class="mb-20 flex flex-col items-center justify-center gap-10 rounded-3xl border bg-slate-400/10 p-6 text-base font-normal sm:p-10 md:justify-start md:p-16 lg:flex-row lg:p-10"
+        data-aos="fade-up"
+      >
+        <div class="lg:w-1/2 lg:text-balance lg:px-10" data-aos="fade-up">
+          <h2
+            class="pb-3 text-xl font-semibold sm:text-2xl"
+            data-aos="fade-down-"
+          >
+            Advanced Additive Manufacturing Monitoring
+          </h2>
+          Ensure optimal performance and efficiency in additive manufacturing
+          with our advanced monitoring solutions. See real-time data and
+          actionable insights, enabling you to maintain high-quality standards,
+          prevent downtime, and optimize resource utilization.
+        </div>
+        <span
+          class="flex h-[18rem] items-center justify-center overflow-hidden rounded-2xl border bg-white/50 p-6 md:h-[22rem] lg:w-1/2"
+          data-aos="zoom-in"
+          ><img
+            src="assets/for-additive-manufactruring/additive-1.png"
+            alt="careers"
+            width="300"
+            height="200"
+            class="h-full w-full object-contain duration-300 hover:scale-105"
+        /></span>
+      </section>
+
+      <section
+        class="flex flex-col items-center justify-center gap-10 px-6 py-10 sm:px-10"
+      >
+        <div
+          class="flex w-full max-w-[70rem] flex-col items-center justify-center overflow-hidden rounded-2xl border bg-white md:h-[20rem] md:flex-row lg:h-fit lg:gap-[5vw]"
+        >
+          <span
+            class="flex max-h-[20rem] w-full justify-center overflow-hidden bg-slate-400/10 md:w-2/5 md:max-w-none md:bg-transparent md:pl-3 lg:bg-slate-400/10"
+            ><img
+              src="assets/for-additive-manufactruring/sensor-installs.png"
+              alt="Ultra long grange sensors"
+              width="400"
+              height="400"
+              class="h-full w-full max-w-[21rem] rounded-2xl object-contain p-3"
+              data-aos="zoom-in"
+          /></span>
+          <div class="w-full p-10 md:w-3/5">
+            <h3
+              data-aos="fade-in"
+              class="2 mb-3 flex w-fit items-center justify-center rounded-md bg-slate-300/20 p-2 text-xs text-green-500 opacity-75"
+            >
+              EFFORTLESS SETUP
+            </h3>
+            <h2
+              data-aos="fade-up"
+              class="text-balance pb-4 pr-10 text-lg font-semibold leading-[1.2] sm:text-xl lg:text-xl"
+            >
+              Installs in minutes, Immediately <br />
+              start getting alerts for:
+            </h2>
+            <p
+              class="text-sm sm:text-base"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Build Failures <br />Low powder <br />Predicted build failures
+            </p>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div
+          class="flex w-full max-w-[70rem] flex-col items-center justify-center overflow-hidden rounded-2xl border bg-white md:h-[20rem] md:flex-row-reverse lg:h-fit"
+        >
+          <span
+            class="flex max-h-[20rem] w-full justify-center bg-slate-400/10 md:w-2/5 md:max-w-none md:bg-transparent md:pr-3 lg:bg-slate-400/10"
+            ><img
+              src="assets/for-additive-manufactruring/live-camera.png"
+              alt="Ultra long grange sensors"
+              width="400"
+              height="400"
+              class="w-full rounded-2xl object-contain p-3"
+              data-aos="zoom-in"
+          /></span>
+          <div class="w-full p-10 md:w-3/5 lg:pl-[5vw]">
+            <h3
+              class="mb-3 flex w-fit items-center justify-center rounded-md bg-slate-300/20 p-2 text-xs text-green-500 opacity-75"
+              data-aos="fade-in"
+            >
+              24/7 VISIBILITY
+            </h3>
+            <h2
+              class="text-balance pb-4 pr-10 text-lg font-semibold leading-[1.2] sm:text-xl lg:text-xl"
+              data-aos="fade-up"
+            >
+              Live Camera Feed
+            </h2>
+            <p
+              class="text-sm sm:text-base lg:w-3/4"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Watch your build from anywhere using the live HD camera feed. Make
+              changes whenever needed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="flex flex-col items-center gap-5">
+        <section class="flex w-full max-w-4xl flex-col gap-5 py-32">
+          <h1
+            class="leading-12 w-full pt-6 text-center text-3xl font-semibold tracking-tighter sm:px-10 sm:text-4xl md:text-6xl lg:pb-4"
+            data-aos="fade-down"
+          >
+            Start optimizing your <br />systems
+            <span class="text-green-500">today</span>
+          </h1>
+
+          <p
+            class="text-balance px-6 text-center text-sm font-medium sm:px-10 md:px-12 md:text-base"
+            data-aos="fade-up"
+          >
+            From the
+            <span class="font-semibold text-green-500">PolySense NODE</span> for
+            Lab Temperature and Humidity tracking, to the
+            <span class="font-semibold text-green-500">PolySense ICE</span> for
+            cold storage monitoring, we have what you need.
+          </p>
+
+          <div class="flex w-full justify-center gap-4 px-6 pb-4 sm:px-10">
+            <a
+              href="mailto:info@polysensesolutions.com"
+              class="group duration-300 ease-in-out"
+              data-aos="zoom-in"
+              ><button
+                type="button"
+                class="duration-300/10 flex items-center justify-center text-nowrap rounded-xl border border-slate-500 bg-slate-400/10 px-4 py-2 text-sm font-medium text-black duration-300 ease-in-out hover:rounded-md hover:bg-slate-400/20 md:text-base"
+              >
+                Get in touch
+                <img
+                  src="assets/about-us/arrow.svg"
+                  alt="arrow"
+                  width="20"
+                  height="20"
+                  class="delay-100 duration-300 ease-in-out group-hover:translate-x-2"
+                /></button
+            ></a>
+            <a
+              href="contact.html"
+              class="duration-300 ease-in-out"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+              ><button
+                type="button"
+                class="flex items-center justify-center text-nowrap rounded-xl bg-green-500 px-4 py-2 text-sm font-medium text-white duration-300 ease-in-out hover:rounded-md hover:bg-blue-600 md:text-base"
+              >
+                Request a demo
+              </button></a
+            >
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer" data-aos="fade-up"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Animation occurs only once
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

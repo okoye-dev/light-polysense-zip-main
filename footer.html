@@ -1,0 +1,235 @@
+<body class="absolute bottom-0 overflow-hidden tracking-tight">
+  <span class="flex h-[2px] w-full bg-white/20"></span>
+
+  <section
+    class="flex flex-col items-center justify-center gap-4 bg-gradient-to-tr from-purple-500/30 via-green-500/20 px-6 py-20 sm:px-10"
+  >
+    <h1 class="text-center text-3xl font-semibold md:text-4xl lg:text-5xl">
+      Subscribe to our <span class="text-green-500">Newsletter</span>
+    </h1>
+    <p
+      class="w-4/5 text-center text-sm sm:text-base md:w-2/3 md:text-lg lg:w-1/2"
+    >
+      Get the latest news and updates on hardware and system
+      <br class="hidden sm:flex" />performance optimisations from
+      <span class="font-semibold text-green-500">PolySense Solutions</span>.
+    </p>
+    <form
+      id="newsletterForm"
+      onsubmit="joinNewsletter(event)"
+      action="submit"
+      class="relative flex w-full max-w-[24.5rem] justify-between rounded-3xl border border-green-300/30 bg-white bg-none px-2 py-3 shadow-sm sm:w-[23rem] lg:w-[24.5rem]"
+    >
+      <input
+        id="emailInput"
+        type="text"
+        placeholder="Enter your email"
+        class="rounded-full w-full bg-transparent px-2 focus-within:bg-transparent focus:border-none focus:outline-none" 
+        required
+      />
+      <button
+        class="absolute translate-y-14 sm:translate-y-0 sm:translate-x-0 py-2 -translate-x-[25vw] right-2 top-2 rounded-full bg-green-500 px-4 sm:py-1 text-white duration-300 hover:bg-green-400"
+        type="submit"
+      >
+        Subscribe
+      </button>
+    </form>
+  </section>
+
+  <section
+    class="flex w-full flex-col items-start gap-2 lg:gap-4 px-6 pt-10 sm:px-10 md:gap-0 lg:flex-row lg:justify-center"
+  >
+    <div
+      class="flex max-h-[20rem] w-full flex-col justify-center rounded-2xl border bg-gradient-to-tr from-blue-200/50 via-green-200/30 to-white px-6 py-6 lg:w-[35rem]"
+    >
+      <a href="/">
+        <img
+          src="assets/navbar/polysense-logo-smalll.svg"
+          alt="logo"
+          width="150"
+          height="60"
+          class="w-32 pb-2 lg:w-40"
+      /></a>
+      <span class="flex items-center gap-3"
+        ><img
+          src="assets/footer/skyscraper.png"
+          alt="skyscraper"
+          width="60"
+          height="60"
+          class="aspect-square h-10 w-10 md:h-16 md:w-16"
+        />
+        <p>
+          3 - 363 Broadway, Suite 312 <br />
+          Winnipeg, MB, R3C 3N9, Canada
+        </p></span
+      >
+      <span class="flex items-center"
+        ><img
+          src="assets/footer/domains.png"
+          alt="skyscraper"
+          width="80"
+          height="40"
+          class="aspect-square h-10 w-10 scale-50 md:h-16 md:w-16"
+        />
+        <p class="translate-x-3">
+          www.polysensesolutions.com <br />info@polysensesolutions.com <br />
+          (204) 890 2879
+        </p></span
+      >
+    </div>
+
+    <section
+      class="flex flex-col justify-center gap-4 pb-10 pt-10 sm:flex-row sm:gap-0 md:gap-[7vw] lg:gap-4 lg:pt-0"
+    >
+      <ul class="flex flex-col gap-4 pb-4 pl-6 sm:pl-0 sm:pr-6 lg:pl-6">
+        <li class="text-lg duration-300 hover:text-green-500">
+          <a href="/">Home</a>
+        </li>
+        <li class="text-lg duration-300 hover:text-green-500">
+          <a href="/contact.html">Contact</a>
+        </li>
+        <li class="duration-300 hover:text-green-500">
+          <ul class="flex flex-wrap gap-3">
+            <li class="duration-300 hover:scale-105">
+              <a
+                href="https://www.linkedin.com/company/polysense-solutions-inc/"
+                ><img
+                  src="assets/footer/linkedin.png"
+                  alt="linkedIn"
+                  width="20"
+                  height="20"
+              /></a>
+            </li>
+            <li class="duration-300 hover:scale-105">
+              <a href="https://www.instagram.com/"
+                ><img
+                  src="assets/footer/instagram.png"
+                  alt="instagram"
+                  width="20"
+                  height="20"
+              /></a>
+            </li>
+            <li class="duration-300 hover:scale-105">
+              <a href="https://facebook.com"
+                ><img
+                  src="assets/footer/facebook.png"
+                  alt="facebook"
+                  width="20"
+                  height="20"
+              /></a>
+            </li>
+            <li class="duration-300 hover:scale-105">
+              <a href="https://x.com"
+                ><img
+                  src="assets/footer/twitter.png"
+                  alt="X"
+                  width="20"
+                  height="20"
+              /></a>
+            </li>
+            <li class="duration-300 hover:scale-105">
+              <a href="/contact.html"
+                ><img
+                  src="assets/footer/youtube.png"
+                  alt="linkedIn"
+                  width="20"
+                  height="20"
+              /></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="flex w-48 flex-col px-6 md:pb-10">
+        <p id="about" class="text-lg opacity-30">About</p>
+        <div class="py-3 text-start text-base">
+          <ul class="flex flex-col gap-3">
+            <li>
+              <a href="/about-us.html" class="duration-300 hover:text-green-500"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="/leadership.html"
+                class="duration-300 hover:text-green-500"
+                >Leadership</a
+              >
+            </li>
+            <li>
+              <a
+                href="/investors.html"
+                class="duration-300 hover:text-green-500"
+                >Investors</a
+              >
+            </li>
+            <li>
+              <a href="/careers.html" class="duration-300 hover:text-green-500"
+                >Careers</a
+              >
+            </li>
+            <li>
+              <a href="/news.html" class="duration-300 hover:text-green-500"
+                >News</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex w-full flex-col pl-6 sm:w-1/2 sm:pl-10 lg:w-1/2">
+        <p id="solutions" class="text-lg opacity-30">Solutions</p>
+        <div class="py-3 text-start text-base">
+          <ul class="flex flex-col gap-3">
+            <li>
+              <a
+                href="/for-labs-and-hospitals.html"
+                class="duration-300 hover:text-green-500"
+                >For Labs & Hospitals</a
+              >
+            </li>
+            <li>
+              <a
+                href="/for-additive-manufacturing.html"
+                class="duration-300 hover:text-green-500"
+                >For Additive Manufacturing</a
+              >
+            </li>
+            <li>
+              <a
+                href="/for-manufacturing-and-industrial-facilities.html"
+                class="duration-300 hover:text-green-500"
+                >For Manufacturing and Industrial Facilities</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/facility-mapping.html"
+                class="duration-300 hover:text-green-500"
+                >Facility Mapping</a
+              >
+            </li>
+            <li>
+              <a
+                href="/inventory-management.html"
+                class="duration-300 hover:text-green-500"
+                >Inventory Management</a
+              >
+            </li>
+            <li>
+              <a
+                href="/case-study.html"
+                class="duration-300 hover:text-green-500"
+                >Case Study</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </section>
+  <div class="w-full border-t px-6 py-4 text-center">
+    Copyright © 2024 PolySense Solutions Inc. All rights reserved.
+  </div>
+</body>

@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polysense Solutions</title>
+  <link rel="stylesheet" href="styles/output.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/form-logo.png" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,500,600,700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-white via-blue-50 font-medium tracking-tight text-black">
+  <!-- Cookies Alert -->
+  <div id="cookies-alert" class="fixed bottom-10 z-10 flex w-full items-center justify-center" data-aos="fade-up"
+    data-aos-delay="800">
+    <div class="w-4/5 rounded-2xl border border-green-500/50 bg-white p-5 shadow-xl sm:w-[30rem]">
+      <p>
+        We use cookies to improve your experience. By using our site, you
+        agree to our <a href="#">cookie policy</a>.
+      </p>
+      <span class="flex w-full gap-2 pt-3"><button type="button" id="accept-cookies"
+          class="w-full rounded-xl bg-green-400 px-4 py-2 text-sm text-white duration-300 hover:rounded-lg hover:bg-green-500 md:text-base">
+          Accept
+        </button>
+        <button id="decline-cookies" type="button"
+          class="duration-300/10 flex w-full items-center justify-center rounded-xl border border-slate-500 bg-slate-400/10 px-4 py-2 text-sm font-medium text-black duration-300 ease-in-out hover:rounded-lg hover:bg-slate-400/20 md:text-base">
+          Decline
+        </button></span>
+    </div>
+  </div>
+
+  <!-- Removed AOS from navbar -->
+  <div id="navbar"></div>
+
+  <!-- Removed AOS from Solutions Hover Menu -->
+  <div onmouseover="slideSolutionsNavIn()" onmouseout="slideSolutionsNavOut()" id="solutions-nav"
+    class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex">
+    <ul class="flex flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:translate-x-16">
+      <li onclick="closeNav()" class="w-full hover:text-green-500">
+        <a class="px-5 py-2 duration-300 ease-in-out" href="/for-labs-and-hospitals.html">For Labs & Hospitals</a>
+      </li>
+      <li onclick="closeNav()" class="w-full hover:text-green-500">
+        <a class="px-5 py-2 duration-300 ease-in-out" href="/for-additive-manufacturing.html">For Additive
+          Manufacturing</a>
+      </li>
+      <li onclick="closeNav()" class="w-full hover:text-green-500">
+        <a class="px-5 py-2 duration-300 ease-in-out hover:text-green-500"
+          href="/for-manufacturing-and-industrial-facilities.html">For Manufacturing and Industrial Facilities</a>
+      </li>
+      <li onclick="closeNav()" class="w-full hover:text-green-500">
+        <a class="px-5 py-2 duration-300 ease-in-out" href="/facility-mapping.html">Facility Mapping</a>
+      </li>
+      <li onclick="closeNav()" class="w-full hover:text-green-500">
+        <a class="px-5 py-2 duration-300 ease-in-out" href="/inventory-management.html">Inventory Management</a>
+      </li>
+
+      <li class="w-full hover:text-green-500" onclick="closeNav()">
+        <a class="px-5 py-2 duration-300 ease-in-out" href="/case-study.html" onclick="closeNav()">Case Study</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Removed AOS from About Hover Menu -->
+  <div onmouseover="slideIn()" onmouseout="slideOut()" id="about-nav"
+    class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex">
+    <ul class="flex w-[12rem] flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:-ml-24 lg:translate-x-16">
+      <li onclick="closeNav()" class="w-full hover:text-green-500">
+        <a class="px-5 py-2 duration-300 ease-in-out" href="/about-us.html">About Us</a>
+      </li>
+      <li onclick="closeNav()" class="w-full hover:text-green-500">
+        <a class="px-5 py-2 duration-300 ease-in-out" href="/leadership.html">Leadership</a>
+      </li>
+      <li onclick="closeNav()" class="w-full hover:text-green-500">
+        <a class="px-5 py-2 duration-300 ease-in-out" href="/investors.html">Investors</a>
+      </li>
+      <li onclick="closeNav()" class="w-full hover:text-green-500">
+        <a class="px-5 py-2 duration-300 ease-in-out" href="/careers.html">Careers</a>
+      </li>
+      <li onclick="closeNav()" class="w-full hover:text-green-500">
+        <a class="px-5 py-2 duration-300 ease-in-out" href="/news.html">News</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Removed AOS from Side Navigation -->
+  <div id="sidenav"
+    class="fixed top-0 z-[100] h-[120vh] w-full translate-x-full overflow-x-hidden duration-300 ease-in-out md:hidden">
+    <nav id="click-outside" class="relative top-0 flex h-full items-start justify-end md:hidden">
+      <img onclick="closeNav()" src="assets/navbar/close.svg" alt="close" width="20" height="20"
+        class="absolute right-7 top-7 sm:right-10" />
+      <div onclick="closeNav()" class="flex h-full w-1/4 flex-col items-start px-[10%] font-medium backdrop-blur-sm">
+      </div>
+      <ul
+        class="flex h-full w-3/4 flex-col items-start gap-2 border-l border-green-200 bg-white px-[10%] py-14 text-sm font-medium">
+        <li>
+          <a href="/" onclick="closeNav()" class="text-lg duration-300 hover:text-green-500">Home</a>
+        </li>
+        <li class="flex flex-col">
+          <p id="about" class="text-lg text-black/50">About</p>
+          <div class="py-3 text-start">
+            <ul class="flex flex-col gap-3">
+              <li>
+                <a href="/about-us.html" class="duration-300 hover:text-green-500" onclick="closeNav()">About Us</a>
+              </li>
+              <li>
+                <a href="/leadership.html" class="duration-300 hover:text-green-500" onclick="closeNav()">Leadership</a>
+              </li>
+              <li>
+                <a href="/investors.html" class="duration-300 hover:text-green-500" onclick="closeNav()">Investors</a>
+              </li>
+              <li>
+                <a href="/careers.html" class="duration-300 hover:text-green-500" onclick="closeNav()">Careers</a>
+              </li>
+              <li>
+                <a href="/news.html" class="duration-300 hover:text-green-500" onclick="closeNav()">News</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="flex flex-col">
+          <p id="solutions" class="text-lg text-black/50">Solutions</p>
+          <div class="py-3 text-start">
+            <ul class="flex flex-col gap-3">
+              <li>
+                <a href="/for-labs-and-hospitals.html" class="duration-300 hover:text-green-500"
+                  onclick="closeNav()">For Labs & Hospitals</a>
+              </li>
+              <li>
+                <a href="/for-additive-manufacturing.html" class="duration-300 hover:text-green-500"
+                  onclick="closeNav()">For Additive Manufacturing</a>
+              </li>
+              <li>
+                <a href="/for-manufacturing-and-industrial-facilities.html" class="duration-300 hover:text-green-500"
+                  onclick="closeNav()">For Manufacturing and Industrial Facilities</a>
+              </li>
+              <li>
+                <a href="/inventory-management.html" class="duration-300 hover:text-green-500"
+                  onclick="closeNav()">Inventory Management</a>
+              </li>
+              <li>
+                <a href="/facility-mapping.html" class="duration-300 hover:text-green-500" onclick="closeNav()">Facility
+                  Mapping</a>
+              </li>
+              <li>
+                <a href="/case-study.html" class="duration-300 hover:text-green-500" onclick="closeNav()">Case Study</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="/contact.html" class="text-lg duration-300 hover:text-green-500">Contact</a>
+        </li>
+
+        <li>
+          <a href="contact.html" class="duration-300 ease-in-out"><button type="button"
+              class="flex items-center justify-center text-nowrap rounded-xl bg-green-400 px-4 py-2 font-medium text-white duration-300 ease-in-out hover:rounded-md hover:bg-green-500">
+              Request a demo
+            </button></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Hero -->
+  <div class="flex min-h-screen flex-col gap-5" data-aos="fade-down">
+    <div class="flex items-center justify-start gap-5">
+      <section
+        class="z-[98] flex flex-col gap-5 bg-gradient-to-r from-white from-[30%] via-transparent via-[70%] px-6 pt-36 sm:px-10 lg:pb-32 lg:pt-[8vw]">
+        <h1
+          class="leading-12 w-3/4 text-4xl font-semibold tracking-tighter sm:text-balance sm:text-5xl md:text-6xl lg:w-2/5 lg:pt-10 lg:text-7xl">
+          Unlock Visibility of Your
+          <span class="text-green-500">Critical</span> Infrastructure
+        </h1>
+        <p class="font-medium md:w-[80%] lg:w-1/2" data-aos="fade-down">
+          Learn how you can remove the stress and risk from operating your
+          critical environment and streamline your operations with Polysense
+        </p>
+        <section class="flex flex-wrap items-center justify-start gap-4 py-4 lg:py-0">
+          <div
+            class="items-between flex max-w-48 flex-col justify-center gap-6 rounded-2xl border border-blue-800/50 bg-gradient-to-tr from-blue-200 px-4 py-4 font-medium leading-[1.15] duration-300"
+            data-aos="fade-up" data-aos-delay="100">
+            <span class="flex w-full justify-start">
+              <img src="assets/index/active.svg" alt="active" width="30" height="30" />
+            </span>
+            <p class="pl- pr-6">Eliminate downtime</p>
+          </div>
+
+          <div
+            class="items-between flex max-w-48 flex-col justify-center gap-6 rounded-2xl border border-blue-800/50 bg-gradient-to-tr from-blue-200 px-4 py-4 font-medium leading-[1.15] duration-300"
+            data-aos="fade-up" data-aos-delay="200">
+            <span class="flex w-full justify-start">
+              <img src="assets/index/active.svg" alt="active" width="30" height="30" />
+            </span>
+            <p class="pr-6">Maximize Asset Utilization</p>
+          </div>
+
+          <div
+            class="items-between flex max-w-48 flex-col justify-center gap-6 rounded-2xl border border-blue-800/50 bg-gradient-to-tr from-blue-200 to-green-50 px-4 py-4 font-medium leading-[1.15] duration-300"
+            data-aos="fade-up" data-aos-delay="300">
+            <span class="flex w-full justify-start">
+              <img src="assets/index/active.svg" alt="active" width="30" height="30" />
+            </span>
+            <p class="pr-6">Streamline Compliance</p>
+          </div>
+        </section>
+      </section>
+
+      <!-- hero image -->
+      <span class="absolute right-0 top-16 flex" data-aos="fade-left">
+        <video src="assets/index/hero-vid.mp4" width="400" height="400"
+          class="hidden max-h-screen w-[80vw] object-cover lg:flex" autoplay loop muted></video>
+      </span>
+    </div>
+
+    <!-- WHY POLYSENSE -->
+    <section class="z-[98] -mt-6 flex flex-col gap-5 bg-gradient-to-b from-white py-8 pb-6 md:py-20 lg:py-0"
+      data-aos="fade-up">
+      <p class="pt-24 text-center text-4xl font-bold md:text-5xl lg:py-10 lg:text-6xl">
+        <span class="flex h-[2px] w-full -translate-y-14 bg-slate-300/10 lg:hidden"></span>
+        Why <span class="text-green-500">PolySense?</span>
+      </p>
+
+      <section class="p-6 sm:px-10 lg:flex-row">
+        <div
+          class="flex flex-col items-center gap-3 rounded-3xl bg-gradient-to-tr from-purple-300/30 via-green-300/30 to-slate-300/10 p-6 backdrop-blur-lg sm:p-10 lg:flex-row lg:justify-center lg:gap-10">
+          <div class="lg:w-2/5">
+            <h2 class="pb-4 text-2xl font-semibold sm:text-4xl" data-aos="fade-down">
+              Effortless Monitoring, <br />
+              <span class="text-green-500">Anytime, Anywhere.</span>
+            </h2>
+            <p class="pb-6 text-base font-medium sm:text-lg lg:pr-6" data-aos="fade-down" data-aos-delay="100">
+              Manage your critical infrastructure from any place, at any time.
+              Our intuitive software offers peace of mind, keeping you
+              informed and stress-free.
+            </p>
+          </div>
+          <div data-aos="zoom-in" class="max-w-xl rounded-3xl bg-slate-400/10 p-6 lg:w-1/2">
+            <span class="flex w-full justify-center overflow-hidden rounded-3xl"><img
+                src="assets/index/why-polysense.png" alt="All systems normal" width="600" height="400"
+                class="h-full w-full object-cover duration-300 hover:scale-105" /></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- AUtomatic Reporting -->
+      <section class="flex flex-wrap items-center justify-center gap-6 overflow-hidden px-6 py-20 sm:px-10">
+        <div
+          class="flex h-40 max-w-xl items-center justify-start gap-8 rounded-3xl border border-green-300/50 bg-slate-300/30 px-6 py-4 text-xs sm:text-base"
+          data-aos="fade-right">
+          <img src="assets/index/statistics.png" alt="statistics" width="50" height="50" />
+          <div class="flex flex-col gap-2">
+            <h2 class="text-lg font-semibold text-green-500">
+              Automatic Reporting
+            </h2>
+            <p>
+              Eliminate paper records and time consuming manual checks. Our
+              wireless sensors take a measurement every few seconds and
+              display on dashboard or report.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex h-40 max-w-xl items-center justify-start gap-8 rounded-3xl border border-green-300/50 bg-slate-300/30 px-6 py-4 text-xs sm:text-base"
+          data-aos="fade-left">
+          <img src="assets/index/eliminate-waste.png" alt="Eliminate Waste" width="50" height="50" />
+          <div class="flex flex-col gap-2">
+            <h2 class="text-lg font-semibold text-green-500">
+              Eliminate Waste
+            </h2>
+            <p>
+              The PolySense Solutions Platform will shine a spotlight on where
+              waste is occurring. Data from deployed sensors are displayed on
+              easy to read dashboards and reports so that you can take action.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex h-40 max-w-xl items-center justify-start gap-8 rounded-3xl border border-green-300/50 bg-slate-300/30 px-6 py-4 text-xs sm:text-base"
+          data-aos="fade-right">
+          <img src="assets/index/security.png" alt="Enhanced Security" width="50" height="50" />
+          <div class="flex flex-col gap-2">
+            <h2 class="text-lg font-semibold text-green-500">
+              Enhanced Security
+            </h2>
+            <p>
+              We have several clients who are ITAR, AS9100, NADCAP, ISO13485
+              certified that are utilizing our platform. Our platform is
+              extremely effective, yet non-invasive. Equipment cannot be
+              controlled or compromised by our sensors.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex h-40 max-w-xl items-center justify-start gap-8 rounded-3xl border border-green-300/50 bg-slate-300/30 px-6 py-4 text-xs sm:text-base"
+          data-aos="fade-left">
+          <img src="assets/index/chat.png" alt="Text & Email Alerts" width="50" height="50" />
+          <div class="flex flex-col gap-2">
+            <h2 class="text-lg font-semibold text-green-500">
+              Text & Email Alerts
+            </h2>
+            <p>
+              Take Action Sooner! Immediately know when asset is predicted to
+              stop, stops, power loss occurs, or temperature/humidity is out
+              of range.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex h-40 max-w-xl items-center justify-start gap-8 rounded-3xl border border-green-300/50 bg-slate-300/30 px-6 py-4 text-xs sm:text-base"
+          data-aos="fade-right">
+          <img src="assets/index/node.png" alt="Scalable" width="50" height="50" />
+          <div class="flex flex-col gap-2">
+            <h2 class="text-lg font-semibold text-green-500">Scalable</h2>
+            <p>
+              Monitoring more assets doesn’t get any easier than this. Our
+              wireless sensors take only minutes to deploy.
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Trusted Across North America -->
+
+    <section class="flex w-full justify-center px-6 py-14 font-medium sm:px-10">
+      <div
+        class="max-w-lg rounded-3xl border bg-gradient-to-tr from-purple-300/30 via-green-300/30 to-white/30 md:max-w-4xl"
+        data-aos="fade-up">
+        <h2 class="px-4 pt-10 text-center text-3xl font-semibold sm:text-4xl" data-aos="fade-up">
+          Trusted Across North America
+        </h2>
+        <div class="flex flex-col items-center justify-center p-4 md:flex-row">
+          <img src="assets/index/north-america.png" alt="map of north america" width="400" height="400"
+            class="h-full w-full max-w-[20rem] object-contain md:max-w-[16rem] lg:max-w-[20rem]" data-aos="zoom-in" />
+          <p class="rounded-3xl px-6 py-10 sm:px-10 md:text-balance md:px-10 md:text-lg" data-aos="fade-up"
+            data-aos-delay="200">
+            Our clients span
+            <span class="text-green-500">coast to coast</span>, from Canada to
+            the United States, demonstrating our reliable and wide-reaching
+            solutions. Join the many businesses that trust PolySense Solutions
+            for comprehensive, real-time monitoring and management.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Partners -->
+    <section class="py-20" data-aos="fade-up">
+      <h2 class="text-center text-3xl font-semibold sm:text-4xl">
+        Our Clients <br class="sm:hidden" />and Partners
+      </h2>
+      <span class="flex flex-wrap items-center justify-center gap-4 px-6 py-8 sm:px-10 lg:px-[10vw]"><img
+          src="assets/index/partner1.png" alt="Orthopaedic" width="300" height="100" class="w-32 lg:w-48" />
+        <img src="assets/index/partner2.png" alt="Orthopaedic" width="300" height="100" class="w-32 lg:w-48" />
+        <img src="assets/index/partner3.png" alt="Orthopaedic" width="300" height="100" class="w-32 lg:w-48" />
+        <img src="assets/index/partner4.png" alt="Orthopaedic" width="300" height="100" class="w-32 lg:w-48" />
+        <img src="assets/index/partner5.png" alt="Orthopaedic" width="300" height="100" class="w-32 lg:w-48" />
+        <img src="assets/index/partner6.png" alt="Orthopaedic" width="300" height="100" class="w-32 lg:w-48" />
+        <img src="assets/index/partner7.png" alt="Orthopaedic" width="300" height="100" class="w-32 lg:w-48" />
+        <img src="assets/index/partner8.png" alt="Orthopaedic" width="300" height="100" class="w-32 lg:w-48" />
+        <img src="assets/index/partner9.png" alt="Orthopaedic" width="300" height="100" class="w-32 lg:w-48" /></span>
+    </section>
+
+    <!-- Polygon -->
+    <section class="flex justify-center px-6 py-16 sm:px-10" data-aos="fade-up">
+      <div class="max-w-4xl rounded-3xl bg-white/10 pt-10 md:pt-14">
+        <h2 class="text-center text-3xl font-bold sm:text-4xl md:text-5xl">
+          Get started <span class="text-green-500">Today</span>
+        </h2>
+        <p class="text-balance px-4 pt-4 text-center font-medium sm:text-lg md:pt-8 lg:text-2xl">
+          Begin optimizing your systems with PolySense
+        </p>
+        <div class="flex w-full justify-center pb-10 pt-4 text-lg" data-aos="zoom-in">
+          <a href="contact.html" class="duration-300 ease-in-out"><button type="button"
+              class="flex items-center justify-center text-nowrap rounded-xl bg-green-500 px-4 py-2 font-medium text-white duration-300 ease-in-out hover:rounded-md hover:bg-blue-600">
+              Request a demo
+            </button></a>
+        </div>
+        <div class="rounded-3xl bg-slate-400/20 p-6">
+          <div class="w-full rounded-3xl bg-green-50/50 p-3 md:p-10 lg:p-14">
+            <div class="flex w-full items-center justify-center overflow-hidden rounded-3xl bg-white md:px-[5vw]"
+              data-aos="zoom-in">
+              <img src="assets/index/polygon.png" alt="benefits polygon" width="600" height="600"
+                class="h-full w-full bg-blue-50 object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SENSOR INSTALLS IN MINUTES -->
+    <span class="flex h-[2px] w-full bg-white/5"></span>
+    <section class="flex flex-col items-center justify-center gap-20 px-6 py-10 sm:gap-14 sm:px-10 md:py-16">
+      <div class="flex flex-col items-center justify-center gap-5 md:w-full md:flex-row md:justify-between md:gap-12"
+        data-aos="fade-up">
+        <div class="flex flex-col items-start justify-center gap-3 md:w-1/2">
+          <h1 class="text-4xl font-bold lg:text-5xl">
+            Sensor Installs in <br />
+            <span class="text-green-500">Minutes</span>
+          </h1>
+          <p class="text-lg">
+            Installs in five minutes on average and typically does not
+            <br class="hidden lg:flex" />require machine to shut down.
+          </p>
+        </div>
+        <div
+          class="relative flex w-full justify-center overflow-hidden text-xs font-medium sm:text-sm md:w-1/2 md:py-4 md:text-base">
+          <div
+            class="absolute top-2 z-10 flex -translate-x-2/3 items-center gap-2 rounded-2xl border bg-white px-4 py-2 text-black shadow-lg sm:-translate-x-full md:top-0 md:-translate-x-2/3 lg:-translate-x-full">
+            <img src="assets/index/live.png" alt="signal range" width="30" height="30" class="aspect-square" />
+            Up to 500m <br />
+            Wireless range
+          </div>
+          <div
+            class="absolute bottom-2 z-10 flex translate-x-2/3 items-center gap-2 rounded-2xl border bg-white px-4 py-2 text-black shadow-lg sm:translate-x-full md:bottom-0 md:translate-x-2/3 lg:translate-x-full">
+            <img src="assets/index/battery-life.png" alt="signal range" width="30" height="30" class="aspect-square" />
+            2 year <br />
+            Battery life
+          </div>
+          <span
+            class="flex h-40 w-[14rem] items-center justify-center overflow-hidden rounded-3xl bg-white pl-2 md:h-48 md:w-[18rem]"
+            data-aos="fade-right">
+            <img src="assets/index/sensor-installs.png" alt="PolySense ONE" width="300" height="200"
+              class="h-full w-full object-contain" /></span>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center justify-center gap-5 overflow-hidden md:flex-row-reverse md:gap-12"
+        data-aos="fade-down">
+        <div class="flex flex-col items-start justify-center gap-3 md:w-1/2">
+          <h1 class="text-balance text-4xl font-bold lg:text-5xl">
+            Receive critical alerts
+            <span class="text-green-500">Immediately</span>
+          </h1>
+          <p class="text-lg">
+            Enjoy peace of mind as our innovative platform keeps you
+            well-informed with instant alerts, alerting you to critical events
+            such as power outages, equipment failures, temperature extremes,
+            and more - empowering you to stay ahead and in control.
+          </p>
+        </div>
+        <span
+          class="flex h-48 w-[20rem] items-center justify-center overflow-hidden rounded-3xl bg-slate-500/10 p-3 md:h-80 md:w-1/2 lg:p-6"
+          data-aos="fade-left">
+          <img src="assets/index/new-message.png" alt="PolySense ONE" width="300" height="200"
+            class="h-full w-full rounded-3xl object-cover" data-aos="zoom-in" /></span>
+      </div>
+    </section>
+
+    <!-- Ultimate Visibility of Operations -->
+    <span class="flex h-[2px] w-full translate-y-8 bg-white/5 lg:translate-y-6"></span>
+    <p class="mt-16 text-center text-4xl font-bold md:py-6 md:text-5xl lg:text-6xl" data-aos="fade-up">
+      Ultimate <br />Visibility of <span class="text-green-500">Operations</span>
+    </p>
+    <section class="flex justify-center py-6 px-6">
+      <img src="assets/index/Lab_Assets.png" alt="operations visibility" width="800" height="800"
+        class=" w-[40rem] flex lg:w-[50rem]" data-aos="fade-in" />
+    </section>
+   
+
+    <!-- Asset Management At a Glance -->
+    <span class="flex h-[2px] w-full translate-y-6 bg-white/5"></span>
+    <section class="py-20" data-aos="fade-up">
+      <p class="pb-6 text-center text-4xl font-bold md:text-5xl lg:pb-10 lg:text-6xl">
+        Asset Management <br />
+        At a <span class="text-green-500">Glance</span>
+      </p>
+      <section class="flex flex-wrap items-center justify-center gap-5 px-6 sm:px-10">
+        <div
+          class="flex max-w-lg flex-col items-start justify-center gap-1 rounded-xl p-5 duration-300 hover:-translate-y-1"
+          data-aos="fade-up">
+          <span class="flex items-center gap-3">
+            <img src="/assets/index/down-time.png" width="30" height="30" alt="downtime" />
+            <h1 class="text-lg font-semibold">Reduce Downtime</h1>
+          </span>
+          <p>
+            Analyze usage trends to understand where downtime occurs,
+            empowering you to take proactive measures to minimize it.
+          </p>
+        </div>
+        <!-- 2 -->
+        <div
+          class="flex max-w-lg flex-col items-start justify-center gap-1 rounded-xl p-5 duration-300 hover:-translate-y-1"
+          data-aos="fade-up">
+          <span class="flex items-center gap-3">
+            <img src="/assets/index/renewable-energy.png" width="30" height="30" alt="electrical waste" />
+            <h1 class="text-lg font-semibold">Minimize Electrical Waste</h1>
+          </span>
+          <p>
+            Precisely track and understand energy consumption to find areas of
+            waste, making your operations more cost-effective.
+          </p>
+        </div>
+        <!-- 3 -->
+        <div
+          class="flex max-w-lg flex-col items-start justify-center gap-1 rounded-xl p-5 duration-300 hover:-translate-y-1"
+          data-aos="fade-up">
+          <span class="flex items-center gap-3">
+            <img src="/assets/index/shield.png" width="30" height="30" alt="enhance safety" />
+            <h1 class="text-lg font-semibold">
+              Enhance Safety and Efficiency
+            </h1>
+          </span>
+          <p>
+            Know who is trained to operate assets, ensuring only qualified
+            individuals have access.
+          </p>
+        </div>
+        <!-- 4 -->
+        <div
+          class="flex max-w-lg flex-col items-start justify-center gap-1 rounded-xl p-5 duration-300 hover:-translate-y-1"
+          data-aos="fade-up">
+          <span class="flex items-center gap-3">
+            <img src="/assets/index/database.png" width="30" height="30" alt="access" />
+            <h1 class="text-lg font-semibold">Simplify Document Access</h1>
+          </span>
+          <p>
+            Retrieve all associated documents, manuals, and warranties with a
+            click, streamlining information retrieval.
+          </p>
+        </div>
+        <!-- 5 -->
+        <div
+          class="flex max-w-lg flex-col items-start justify-center gap-1 rounded-xl p-5 duration-300 hover:-translate-y-1"
+          data-aos="fade-up">
+          <span class="flex items-center gap-3">
+            <img src="/assets/index/optimizing.png" width="30" height="30" alt="maintenance" />
+            <h1 class="text-lg font-semibold">
+              Facilitate Maintenance and Planning
+            </h1>
+          </span>
+          <p>
+            Quickly locate assets in large facilities or campuses, enabling
+            efficient maintenance and strategic planning.
+          </p>
+        </div>
+        <!-- 6 -->
+        <div
+          class="flex max-w-lg flex-col items-start justify-center gap-1 rounded-xl p-5 duration-300 hover:-translate-y-1"
+          data-aos="fade-up">
+          <span class="flex items-center gap-3">
+            <img src="/assets/index/admin-panel.png" width="30" height="30" alt="asset control" />
+            <h1 class="text-lg font-semibold">Control Asset Information</h1>
+          </span>
+          <p>
+            Manage vital details like serial numbers, purchase prices, and
+            more, allowing for informed asset life cycle management.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- Youtube video -->
+    <p class="pt-10 text-center text-4xl font-bold md:text-5xl lg:pb-6 lg:text-6xl" data-aos="fade-up">
+      A Quick <br />Overview of Us
+    </p>
+    <div class="flex w-full items-center justify-center rounded-2xl px-10 pb-20" data-aos="fade-up">
+      <iframe class="rounded-2xl lg:h-[27rem] lg:w-2/3" title="Polysense Overview" width="560" height="315"
+        src="https://www.youtube.com/embed/0QMLhEjt-eU" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        loading="lazy" data-aos="zoom-in"></iframe>
+    </div>
+
+    <footer id="footer" data-aos="fade-up"></footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Animation occurs only once
+    });
+  </script>
+  <script src="main.js"></script>
+</body>
+
+</html>

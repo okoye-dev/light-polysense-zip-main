@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polysense Solutions</title>
+    <link rel="stylesheet" href="styles/output.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/form-logo.png" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-r from-[#000D23] via-[#000D23] to-[#022e42] tracking-tight text-black"
+  >
+    <div id="navbar"></div>
+    <!-- About Hover Menu -->
+    <div
+      onmouseover="slideIn()"
+      onmouseout="slideOut()"
+      id="about-nav"
+      class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex"
+    >
+      <ul
+        class="flex flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:translate-x-16"
+      >
+        <li class="w-full">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out hover:text-green-500"
+            href="/inventory-management.html"
+            onclick="closeNav()"
+            >Inventory Management</a
+          >
+        </li>
+        <li class="w-full">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out hover:text-green-500"
+            href="/facility-mapping.html"
+            onclick="closeNav()"
+            >Facility Mapping</a
+          >
+        </li>
+        <li class="w-full">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out hover:text-green-500"
+            href="/case-study.html"
+            onclick="closeNav()"
+            >Case Study</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Side Navigation -->
+    <div
+      id="sidenav"
+      class="fixed top-0 z-[100] h-[120vh] w-full translate-x-full overflow-x-hidden duration-300 ease-in-out sm:hidden"
+    >
+      <nav
+        id="click-outside"
+        class="relative top-0 flex h-full items-start justify-end sm:hidden"
+      >
+        <img
+          onclick="closeNav()"
+          src="assets/navbar/close.svg"
+          alt="close"
+          width="20"
+          height="20"
+          class="absolute right-7 top-8"
+        />
+        <div
+          onclick="closeNav()"
+          class="flex h-full w-1/4 flex-col items-start px-[10%] text-3xl font-medium backdrop-blur-sm"
+        ></div>
+        <ul
+          class="flex h-full w-3/4 flex-col items-start gap-8 border-l border-green-200 bg-white px-[10%] py-20 text-3xl font-medium"
+        >
+          <li>
+            <a
+              href="/"
+              onclick="closeNav()"
+              class="duration-300 hover:text-green-500"
+              >Home</a
+            >
+          </li>
+          <li class="flex flex-col">
+            <p id="about">About</p>
+            <div class="py-3 text-start text-lg">
+              <ul class="flex flex-col gap-3">
+                <li>
+                  <a
+                    href="/inventory-management.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Inventory Management</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/facility-mapping.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Facility Mapping</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/hardware-overview.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Hardware Overview</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/network-diagram.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Network Diagram</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/case-study.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Case Study</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/contact.html" class="duration-300 hover:text-green-500"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="duration-300 ease-in-out"
+              ><button
+                type="button"
+                class="flex items-center justify-center text-nowrap rounded-xl bg-red-500 px-4 py-2 text-lg font-medium text-black duration-300 ease-in-out hover:rounded-md hover:bg-red-400"
+              >
+                Request a demo
+              </button></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Content -->
+    <div
+      class="flex w-full flex-col items-center justify-center gap-3 lg:flex-row lg:justify-start"
+    >
+      <span
+        class="z-[95] px-6 pb-[80vw] pt-28 sm:px-10 md:pb-[70vw] lg:min-h-screen lg:w-2/3 lg:bg-gradient-to-r lg:from-[#000D23] lg:from-[40%] lg:via-[#000D23]/95 lg:via-[45%] lg:to-[85%] lg:px-10 lg:pb-0 lg:pt-60"
+      >
+        <h1
+          class="pb-5 text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl"
+        >
+          <span class="text-green-500">Network</span> Diagram
+        </h1>
+        <p class="pb-2 text-sm sm:text-base lg:w-3/4 lg:text-lg">
+          No user needs to communicate with the sensors directly. The sensors
+          only communicate with the gateway. The production network and IoT VLAN
+          are completely separated and have no need to communicate with each
+          other.
+        </p>
+      </span>
+
+      <span
+        class="absolute top-[18rem] z-[94] my-5 flex w-full items-center justify-center overflow-hidden border bg-white md:top-64 md:w-[90%] md:rounded-lg lg:right-0 lg:top-16 lg:min-h-[80vh] lg:w-3/4 lg:rounded-none lg:border-none lg:pl-[21rem]"
+        ><img
+          src="assets/network-diagram/network-diagram.png"
+          alt="inventory-management"
+          width="1000"
+          height="800"
+          class="w-full object-cover"
+      /></span>
+    </div>
+
+    <footer id="footer" class="lg:absolute lg:w-full"></footer>
+    <script src="main.js"></script>
+  </body>
+</html>

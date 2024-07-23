@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polysense Solutions</title>
+    <link rel="stylesheet" href="styles/output.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/form-logo.png" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-b from-blue-50 tracking-tight text-black"
+  >
+    <div id="navbar"></div>
+    <!-- Solutions Hover Menu -->
+    <div
+      onmouseover="slideSolutionsNavIn()"
+      onmouseout="slideSolutionsNavOut()"
+      id="solutions-nav"
+      class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex"
+    >
+      <ul
+        class="flex flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:translate-x-16"
+      >
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/for-labs-and-hospitals.html"
+            >For Labs & Hospitals</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/for-additive-manufacturing.html"
+            >For Additive Manufacturing</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out hover:text-green-500"
+            href="/for-manufacturing-and-industrial-facilities.html"
+            >For Manufacturing and Industrial Facilities</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/facility-mapping.html"
+            >Facility Mapping</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/inventory-management.html"
+            >Inventory Management</a
+          >
+        </li>
+        <li class="w-full hover:text-green-500" onclick="closeNav()">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/case-study.html"
+            onclick="closeNav()"
+            >Case Study</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- About Hover Menu -->
+    <div
+      onmouseover="slideIn()"
+      onmouseout="slideOut()"
+      id="about-nav"
+      class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex"
+    >
+      <ul
+        class="flex w-[12rem] flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:-ml-24 lg:translate-x-16"
+      >
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/about-us.html"
+            >About Us</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/leadership.html"
+            >Leadership</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/investors.html"
+            >Investors</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/careers.html"
+            >Careers</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/news.html"
+            >News</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- Side Navigation -->
+    <div
+      id="sidenav"
+      class="fixed top-0 z-[100] h-[120vh] w-full translate-x-full overflow-x-hidden duration-300 ease-in-out md:hidden"
+    >
+      <nav
+        id="click-outside"
+        class="relative top-0 flex h-full items-start justify-end md:hidden"
+      >
+        <img
+          onclick="closeNav()"
+          src="assets/navbar/close.svg"
+          alt="close"
+          width="20"
+          height="20"
+          class="absolute right-7 top-7 sm:right-10"
+        />
+        <div
+          onclick="closeNav()"
+          class="flex h-full w-1/4 flex-col items-start px-[10%] font-medium backdrop-blur-sm"
+        ></div>
+        <ul
+          class="flex h-full w-3/4 flex-col items-start gap-2 border-l border-green-200 bg-white px-[10%] py-14 text-sm font-medium"
+        >
+          <li>
+            <a
+              href="/"
+              onclick="closeNav()"
+              class="text-lg duration-300 hover:text-green-500"
+              >Home</a
+            >
+          </li>
+          <li class="flex flex-col">
+            <p id="about" class="text-lg text-black/50">About</p>
+            <div class="py-3 text-start">
+              <ul class="flex flex-col gap-3">
+                <li>
+                  <a
+                    href="/about-us.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/leadership.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Leadership</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/investors.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Investors</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/careers.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/news.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >News</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-col">
+            <p id="solutions" class="text-lg text-black/50">Solutions</p>
+            <div class="py-3 text-start">
+              <ul class="flex flex-col gap-3">
+                <li>
+                  <a
+                    href="/for-labs-and-hospitals.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Labs & Hospitals</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/for-additive-manufacturing.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Additive Manufacturing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/for-manufacturing-and-industrial-facilities.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Manufacturing and Industrial Facilities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/inventory-management.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Inventory Management</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/facility-mapping.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Facility Mapping</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/case-study.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Case Study</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/contact.html"
+              class="text-lg duration-300 hover:text-green-500"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="duration-300 ease-in-out"
+              ><button
+                type="button"
+                class="flex items-center justify-center text-nowrap rounded-xl bg-blue-500 px-4 py-2 font-medium text-black duration-300 ease-in-out hover:rounded-md hover:bg-blue-600"
+              >
+                Request a demo
+              </button></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Content -->
+    <div class="px-6 pt-32 sm:px-10">
+      <div
+        class="flex w-full flex-col items-center justify-center gap-3 lg:flex-row"
+      >
+        <span class="lg:w-3/5">
+          <h1
+            class="leading-12 pb-5 text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl"
+            data-aos="fade-down"
+          >
+            Take Control with
+            <span class="text-green-500">PolySense Inventory Management</span>
+          </h1>
+          <p
+            class="w-[90%] pb-2 lg:text-lg"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            Eliminate Guesswork. Record and organize inventory details with
+            ease, removing uncertainties and boosting efficiency. Assign
+            inventory to specific projects, ensuring precise tracking and
+            optimal resource allocation.
+          </p>
+        </span>
+        <span
+          class="my-5 flex w-full items-center justify-center overflow-hidden rounded-3xl bg-white/10 p-3 md:w-4/5 lg:w-1/2"
+          ><img
+            src="assets/inventory-management/inventory-management.png"
+            alt="inventory-management"
+            width="1000"
+            height="800"
+            class="w-full rounded-3xl object-cover"
+            data-aos="zoom-in"
+        /></span>
+      </div>
+      <h1
+        class="pb-10 pt-20 text-center text-4xl font-semibold lg:text-5xl"
+        data-aos="fade-down"
+      >
+        <span class="text-green-500">Power,</span> In Your Hands
+      </h1>
+      <section class="flex flex-wrap justify-center gap-6 pb-10">
+        <div
+          class="flex max-w-md flex-col gap-4 rounded-xl bg-slate-400/10 px-8 py-6 md:text-lg"
+          data-aos="fade-left"
+        >
+          <span class="flex flex-col justify-center gap-3">
+            <img
+              src="assets/inventory-management/prohibited.png"
+              alt="avoid"
+              width="40"
+              height="40"
+            />
+            <h2 class="text-2xl text-green-500">Avoid Unpleasant Surprises</h2>
+          </span>
+          <p>
+            Get timely alerts for compromised items or those approaching expiry,
+            reducing waste and maintaining quality.
+          </p>
+        </div>
+        <div
+          class="flex max-w-md flex-col gap-4 rounded-xl bg-slate-400/10 px-8 py-6"
+          data-aos="fade-right"
+        >
+          <img
+            src="assets/inventory-management/find.png"
+            alt="fast search"
+            width="40"
+            height="40"
+          />
+          <h2 class="text-2xl text-green-500">Find What You Need, Fast</h2>
+          <p>
+            Quickly locate items within your inventory, enhancing operational
+            responsiveness.
+          </p>
+        </div>
+        <div
+          class="flex max-w-md flex-col gap-4 rounded-xl bg-slate-400/10 px-8 py-6"
+          data-aos="fade-left"
+        >
+          <img
+            src="assets/inventory-management/decision-making.png"
+            alt="decision-making"
+            width="40"
+            height="40"
+          />
+          <h2 class="text-2xl text-green-500">Make Informed Decisions</h2>
+          <p>
+            Gain insights into inventory trends and consumption patterns,
+            empowering better planning and cost control.
+          </p>
+        </div>
+      </section>
+    </div>
+    <!-- footer -->
+    <footer id="footer" data-aos="fade-up"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Animation occurs only once
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

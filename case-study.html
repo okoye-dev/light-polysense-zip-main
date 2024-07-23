@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polysense Solutions</title>
+    <link rel="stylesheet" href="styles/output.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/form-logo.png" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-b from-blue-50 tracking-tight text-black"
+  >
+    <div id="navbar"></div>
+    <!-- Solutions Hover Menu -->
+    <div
+      onmouseover="slideSolutionsNavIn()"
+      onmouseout="slideSolutionsNavOut()"
+      id="solutions-nav"
+      class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex"
+    >
+      <ul
+        class="flex flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:translate-x-16"
+      >
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/for-labs-and-hospitals.html"
+            >For Labs & Hospitals</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/for-additive-manufacturing.html"
+            >For Additive Manufacturing</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out hover:text-green-500"
+            href="/for-manufacturing-and-industrial-facilities.html"
+            >For Manufacturing and Industrial Facilities</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/facility-mapping.html"
+            >Facility Mapping</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/inventory-management.html"
+            >Inventory Management</a
+          >
+        </li>
+
+        <li class="w-full hover:text-green-500" onclick="closeNav()">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/case-study.html"
+            onclick="closeNav()"
+            >Case Study</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- About Hover Menu -->
+    <div
+      onmouseover="slideIn()"
+      onmouseout="slideOut()"
+      id="about-nav"
+      class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex"
+    >
+      <ul
+        class="flex w-[12rem] flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:-ml-24 lg:translate-x-16"
+      >
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/about-us.html"
+            >About Us</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/leadership.html"
+            >Leadership</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/investors.html"
+            >Investors</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/careers.html"
+            >Careers</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/news.html"
+            >News</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Side Navigation -->
+    <div
+      id="sidenav"
+      class="fixed top-0 z-[100] h-[120vh] w-full translate-x-full overflow-x-hidden duration-300 ease-in-out md:hidden"
+    >
+      <nav
+        id="click-outside"
+        class="relative top-0 flex h-full items-start justify-end md:hidden"
+      >
+        <img
+          onclick="closeNav()"
+          src="assets/navbar/close.svg"
+          alt="close"
+          width="20"
+          height="20"
+          class="absolute right-7 top-7 sm:right-10"
+        />
+        <div
+          onclick="closeNav()"
+          class="flex h-full w-1/4 flex-col items-start px-[10%] font-medium backdrop-blur-sm"
+        ></div>
+        <ul
+          class="flex h-full w-3/4 flex-col items-start gap-2 border-l border-green-200 bg-white px-[10%] py-14 text-sm font-medium"
+        >
+          <li>
+            <a
+              href="/"
+              onclick="closeNav()"
+              class="text-lg duration-300 hover:text-green-500"
+              >Home</a
+            >
+          </li>
+          <li class="flex flex-col">
+            <p id="about" class="text-lg text-black/50">About</p>
+            <div class="py-3 text-start">
+              <ul class="flex flex-col gap-3">
+                <li>
+                  <a
+                    href="/about-us.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/leadership.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Leadership</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/investors.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Investors</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/careers.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/news.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >News</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-col">
+            <p id="solutions" class="text-lg text-black/50">Solutions</p>
+            <div class="py-3 text-start">
+              <ul class="flex flex-col gap-3">
+                <li>
+                  <a
+                    href="/for-labs-and-hospitals.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Labs & Hospitals</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/for-additive-manufacturing.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Additive Manufacturing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/for-manufacturing-and-industrial-facilities.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Manufacturing and Industrial Facilities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/inventory-management.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Inventory Management</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/facility-mapping.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Facility Mapping</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/case-study.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Case Study</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a
+              href="/contact.html"
+              class="text-lg duration-300 hover:text-green-500"
+              >Contact</a
+            >
+          </li>
+
+          <li>
+            <a href="contact.html" class="duration-300 ease-in-out"
+              ><button
+                type="button"
+                class="flex items-center justify-center text-nowrap rounded-xl bg-green-400 px-4 py-2 font-medium text-white duration-300 ease-in-out hover:rounded-md hover:bg-green-500"
+              >
+                Request a demo
+              </button></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Content -->
+    <div
+      class="flex flex-col items-center justify-center overflow-hidden px-6 pb-20 pt-36 font-semibold sm:px-10 lg:flex-row lg:justify-between"
+    >
+      <div class="lg:w-2/5">
+        <h1
+          class="w-3/4 text-2xl md:text-3xl lg:w-full lg:text-4xl"
+          data-aos="fade-down"
+        >
+          Significant Cost Reduction in Manufacturing
+        </h1>
+        <h2 class="py-3 text-xl" data-aos="fade-down" data-aos-delay="200">
+          The Power Of Energy Monitoring
+        </h2>
+        <h3 class="flex flex-col">
+          <p
+            class="w-fit rounded-lg border bg-slate-500/10 p-2"
+            data-aos="fade-down"
+            data-aos-delay="300"
+          >
+            Funded By:
+          </p>
+          <img
+            src="assets/index/partner7.png"
+            alt="Efficiency Manitoba"
+            width="300"
+            height="300"
+            data-aos="zoom-out"
+          />
+        </h3>
+      </div>
+      <div class="flex flex-col gap-4 overflow-hidden py-10 lg:pr-20">
+        <span
+          class="flex h-28 max-w-md items-center overflow-hidden rounded-2xl border border-slate-700/30 bg-green-50/70"
+          data-aos="fade-left"
+          ><h1
+            class="flex h-full items-center justify-center border-r bg-white px-6 text-2xl text-green-500 sm:p-6 sm:text-5xl"
+          >
+            $8500
+          </h1>
+
+          <div class="px-6">
+            Estimated annual electricity Savings
+            <p class="text-sm text-black/70">
+              This represents a 28% reduction.
+            </p>
+          </div></span
+        >
+        <span
+          class="flex h-28 max-w-md items-center overflow-hidden rounded-2xl border border-slate-700/30 bg-green-50/70"
+          data-aos="fade-left"
+          data-aos-delay="300"
+          ><h1
+            class="flex h-full items-center justify-center border-r bg-white px-6 text-2xl text-green-500 sm:p-6 sm:text-5xl"
+          >
+            $3200
+          </h1>
+
+          <div class="px-6">Estimated Maintenance Savings</div></span
+        >
+        <span
+          class="flex h-28 max-w-md items-center overflow-hidden rounded-2xl border border-slate-700/30 bg-green-50/70"
+          data-aos="fade-left"
+          data-aos-delay="600"
+          ><h1
+            class="flex h-full items-center justify-center border-r bg-white px-6 text-xl text-green-500 sm:p-6 sm:text-4xl"
+          >
+            90,000kWh
+          </h1>
+
+          <div class="px-6">Estimated Energy Saved</div></span
+        >
+      </div>
+    </div>
+
+    <span class="flex h-[2px] w-full bg-slate-500/10"></span>
+    <!-- Section 2 -->
+    <section
+      class="sm-px-10 flex w-full justify-center overflow-hidden px-6 py-20"
+    >
+      <div class="flex max-w-3xl flex-col gap-4">
+        <h1
+          class="py-3 text-3xl font-semibold lg:text-4xl"
+          data-aos="fade-down"
+        >
+          Energy Utilization Monitoring
+        </h1>
+        <p
+          class="rounded-2xl border bg-slate-500/10 p-6 font-normal"
+          data-aos="zoom-out"
+        >
+          In this case study,
+          <span class="text-green-500">PolySense Solutions</span> used its
+          proprietary
+          <span class="text-green-500">AMP/BOLT</span>
+          technologies to monitor energy usage and utilization of 24 machines at
+          a small manufacturing facility in Winnipeg, Manitoba.
+        </p>
+        <p class="font-normal" data-aos="fade-up" data-aos-delay="300">
+          Over the first two months of monitoring, PolySense was able to
+          identify potential energy savings of $8500 annually, which represents
+          a substantial 28% reduction in their current annual electricity
+          expenditure. The majority of these savings were attributable to
+          inefficiencies in three key machines - an air compressor, a wire
+          electrical discharge machining (EDM) unit, and a rooftop HVAC unit.
+          <br />
+          The main air compressor was found to be operating at nearly 100% duty
+          cycle due to several system leaks. In addition, the wire EDM machine
+          was discovered to be left on standby mode and was never completely
+          powered down, contributing to significant unnecessary energy
+          expenditure. The rooftop unit was improperly programmed, with a poorly
+          set thermostat leading to high power usage. <br />
+          <br />
+          If these issues are rectified, energy consumption for these machines
+          should be dramatically reduced. This client also benefitted from
+          better visibility into their operations and equipment utilization due
+          to the automatic data capture and reporting on the PolySense Platform
+          <br />
+          <br />
+          This case study illustrates the potential for significant energy
+          savings in similar facilities through the use of advanced monitoring
+          technologies like AMP and BOLT.
+        </p>
+      </div>
+    </section>
+
+    <span class="flex h-[2px] w-full bg-slate-500/10"></span>
+
+    <!-- Section 3 -->
+    <section class="px-6 py-20 sm:px-10">
+      <h1
+        class="w-full pb-8 text-center text-3xl font-semibold md:text-4xl"
+        data-aos="fade-down"
+      >
+        Sensor Equipments Utilized
+      </h1>
+      <!-- amp -->
+      <div
+        class="flex flex-col justify-center gap-4 pb-20 md:flex-row md:gap-10 lg:gap-20"
+      >
+        <div class="md:w-4/5 lg:w-2/5">
+          <h1
+            class="w-3/4 text-2xl font-semibold text-green-500 md:text-3xl lg:w-full lg:text-4xl"
+            data-aos="fade-down"
+          >
+            PolySense AMP
+          </h1>
+          <h2 class="py-3" data-aos="fade-up">
+            With its ability to monitor the electricity usage of any equipment
+            or circuit, the AMP provides comprehensive insights into energy
+            consumption, usage patterns, and maintenance needs
+          </h2>
+          <div class="flex gap-3 py-4">
+            <span
+              class="rounded-lg border bg-slate-700/5 px-4 py-2"
+              data-aos="zoom-in"
+              >Equipment Failure</span
+            >
+            <span
+              class="rounded-lg border bg-slate-700/5 px-4 py-2"
+              data-aos="zoom-in"
+              >Temperature Alert</span
+            >
+          </div>
+        </div>
+        <span
+          class="flex items-center justify-center overflow-hidden rounded-2xl bg-white"
+        >
+          <img
+            src="assets/case-study/amp.png"
+            alt="Polysense AMP"
+            width="300"
+            height="300"
+            class="h-full w-full max-w-80 object-contain"
+            data-aos="zoom-in"
+        /></span>
+      </div>
+
+      <!-- bolt -->
+      <div
+        class="flex flex-col justify-center gap-4 md:flex-row md:gap-10 lg:gap-20"
+      >
+        <div class="md:w-4/5 lg:w-2/5">
+          <h1
+            class="w-3/4 text-2xl font-semibold text-green-500 md:text-3xl lg:w-full lg:text-4xl"
+            data-aos="fade-down"
+          >
+            PolySense BOLT
+          </h1>
+          <h2 class="py-3" data-aos="fade-up">
+            The BOLT is a smart plug that revolutionizes energy management and
+            asset monitoring.
+            <br />
+            With its intelligent capabilities and user-friendly interface the
+            BOLT provides real-time data and analytics, empowering you to
+            optimize energy consumption, schedule asset usage, and proactively
+            address maintenance issues.
+          </h2>
+          <div class="flex gap-3 py-4">
+            <span
+              class="rounded-lg border bg-slate-700/5 px-4 py-2"
+              data-aos="zoom-in"
+              >Temperature Alert</span
+            >
+            <span
+              class="rounded-lg border bg-slate-700/5 px-4 py-2"
+              data-aos="zoom-in"
+              >Power Outages</span
+            >
+          </div>
+        </div>
+        <span
+          class="flex items-center justify-center overflow-hidden rounded-2xl bg-white"
+        >
+          <img
+            src="assets/case-study/bolt.png"
+            alt="Polysense BOLT"
+            width="300"
+            height="300"
+            class="h-full w-full max-w-80 object-contain"
+            data-aos="zoom-in"
+        /></span>
+      </div>
+    </section>
+
+    <span class="flex h-[2px] w-full bg-slate-500/10"></span>
+
+    <!-- Section 4 -->
+    <section class="px-6 py-20 sm:px-10">
+      <h1
+        class="w-full pb-8 text-center text-3xl font-semibold md:text-4xl lg:pb-12"
+      >
+        Manufacturing and Facility <br />
+        Assets Monitored
+      </h1>
+      <div class="flex items-center justify-center">
+        <div
+          class="flex w-full max-w-5xl flex-wrap items-center justify-center gap-4 lg:gap-12"
+        >
+          <span
+            class="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-2xl border bg-white pb-8"
+            data-aos="zoom-in"
+          >
+            <img
+              src="assets/case-study/asset1.png"
+              alt="asset1"
+              width="150"
+              height="150"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 z-10 w-full rounded-2xl border bg-white/60 py-3 text-center backdrop-blur-lg"
+            >
+              CNC Milling Machine 1
+            </div></span
+          >
+          <span
+            class="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-2xl border bg-white pb-8"
+            data-aos="zoom-in"
+          >
+            <img
+              src="assets/case-study/asset2.png"
+              alt="asset2"
+              width="150"
+              height="150"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 z-10 w-full rounded-2xl border bg-white/60 py-3 text-center backdrop-blur-lg"
+            >
+              CNC Milling Machine 2
+            </div></span
+          >
+          <span
+            class="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-2xl border bg-white pb-8"
+            data-aos="zoom-in"
+          >
+            <img
+              src="assets/case-study/asset3.png"
+              alt="asset3.png"
+              width="150"
+              height="150"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 z-10 w-full rounded-2xl border bg-white/60 py-3 text-center backdrop-blur-lg"
+            >
+              CNC Milling Machine 3
+            </div></span
+          >
+          <span
+            class="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-2xl border bg-white pb-8"
+            data-aos="zoom-in"
+          >
+            <img
+              src="assets/case-study/asset4.png"
+              alt="asset4.png"
+              width="150"
+              height="150"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 z-10 w-full rounded-2xl border bg-white/60 py-3 text-center backdrop-blur-lg"
+            >
+              Wire EDM Machine
+            </div></span
+          >
+          <span
+            class="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-2xl border bg-white pb-8"
+            data-aos="zoom-in"
+          >
+            <img
+              src="assets/case-study/asset5.png"
+              alt="asset5.png"
+              width="150"
+              height="150"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 z-10 w-full rounded-2xl border bg-white/60 py-3 text-center backdrop-blur-lg"
+            >
+              Pedestal Grinder
+            </div></span
+          >
+          <span
+            class="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-2xl border bg-white pb-8"
+            data-aos="zoom-in"
+          >
+            <img
+              src="assets/case-study/asset6.png"
+              alt="asset6.png"
+              width="150"
+              height="150"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 z-10 w-full rounded-2xl border bg-white/60 py-3 text-center backdrop-blur-lg"
+            >
+              Media Blaster
+            </div></span
+          >
+          <span
+            class="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-2xl border bg-white pb-8"
+            data-aos="zoom-in"
+          >
+            <img
+              src="assets/case-study/asset7.png"
+              alt="asset7.png"
+              width="150"
+              height="150"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 z-10 w-full rounded-2xl border bg-white/60 py-3 text-center backdrop-blur-lg"
+            >
+              Dremel Tool
+            </div></span
+          >
+          <span
+            class="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-2xl border bg-white pb-3"
+            data-aos="zoom-in"
+          >
+            <img
+              src="assets/case-study/fac-asset1.png"
+              alt="fac-asset1"
+              width="150"
+              height="150"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 z-10 w-full rounded-2xl border bg-white/60 py-3 text-center backdrop-blur-lg"
+            >
+              RoofTop HVAC
+            </div></span
+          >
+          <span
+            class="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-2xl border bg-white pb-8"
+            data-aos="zoom-in"
+          >
+            <img
+              src="assets/case-study/fac-asset2.png"
+              alt="fac-asset2.png"
+              width="150"
+              height="150"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 z-10 w-full rounded-2xl border bg-white/60 py-3 text-center backdrop-blur-lg"
+            >
+              Stop Floor Lighting
+            </div></span
+          >
+          <span
+            class="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-2xl border bg-white pb-8"
+            data-aos="zoom-in"
+          >
+            <img
+              src="assets/case-study/fac-asset3.png"
+              alt="fac-asset3.png"
+              width="150"
+              height="150"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 z-10 w-full rounded-2xl border bg-white/60 py-3 text-center backdrop-blur-lg"
+            >
+              Air Compressor 1
+            </div></span
+          >
+          <span
+            class="relative flex h-52 w-52 items-center justify-center overflow-hidden rounded-2xl border bg-white pb-8"
+            data-aos="zoom-in"
+          >
+            <img
+              src="assets/case-study/fac-asset4.png"
+              alt="fac-asset4.png"
+              width="150"
+              height="150"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 z-10 w-full rounded-2xl border bg-white/60 py-3 text-center backdrop-blur-lg"
+            >
+              Air Compressor 2
+            </div></span
+          >
+        </div>
+      </div>
+    </section>
+
+    <span class="flex h-[2px] w-full bg-slate-500/10"></span>
+
+    <!-- Section 5 -->
+    <section class="px-6 py-20 sm:px-10">
+      <h1
+        class="w-full pb-8 text-center text-3xl font-semibold md:text-4xl lg:pb-12"
+      >
+        Savings Discovered
+      </h1>
+      <div class="flex flex-col items-center justify-center gap-14">
+        <div
+          class="flex w-full max-w-[70rem] flex-col items-center justify-center overflow-hidden rounded-2xl border bg-white md:flex-row lg:gap-[5vw]"
+        >
+          <span
+            class="flex max-h-[20rem] w-full justify-center bg-slate-300/10 md:w-2/5 md:max-w-none"
+            ><img
+              src="assets/case-study/fac-asset4.png"
+              alt="Air compressor 1"
+              width="400"
+              height="400"
+              class="h-[20rem] w-full rounded-t-2xl object-cover md:rounded-t-none"
+              data-aos="zoom-in"
+          /></span>
+          <div class="w-full p-10 md:w-3/5">
+            <h2
+              data-aos="fade-up"
+              class="text-balance pb-4 text-lg font-semibold leading-[1.2] sm:text-xl md:text-2xl lg:pr-10"
+            >
+              Air Compressor.
+            </h2>
+            <p
+              class="text-sm sm:text-base"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Estimated Electricity Savings = $6000/year <br />Estimated
+              Additional Savings = $1200 <br />
+              <br /><span class="font-semibold">Changes to implement</span>:
+              PolySense Solutions found and measured 8 significant air leaks.
+              Repairing these leaks will have a substantial impact on energy
+              costs and equipment lifetime
+            </p>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div
+          class="flex w-full max-w-[70rem] flex-col items-center justify-center overflow-hidden rounded-2xl border bg-white md:flex-row-reverse lg:gap-[5vw]"
+        >
+          <span
+            class="flex max-h-[20rem] w-full justify-center md:w-2/5 md:max-w-none"
+            ><img
+              src="assets/case-study/fac-asset1.png"
+              alt="Air compressor 1"
+              width="400"
+              height="400"
+              class="h-[20rem] w-full rounded-t-2xl border-b object-contain p-3 md:rounded-t-none md:border-l md:border-b-transparent"
+              data-aos="zoom-in"
+          /></span>
+          <div class="w-full p-10 md:w-3/5">
+            <h2
+              data-aos="fade-up"
+              class="text-balance pb-4 pr-10 text-lg font-semibold leading-[1.2] sm:text-xl md:text-2xl"
+            >
+              Rooftop HVAC Unit.
+            </h2>
+            <p
+              class="text-sm sm:text-base"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Estimated Electricity Savings = $500/year <br />Estimated
+              Additional Savings = $120/year + reduced maintenance
+              <br /><br /><span class="font-semibold">Changes implemented</span
+              >:<br />
+              Thermostat was found to be on hold A/C mode 24/7. <br />Adjusted
+              thermostat temperature and schedule so that a reasonable
+              temperature was held during regular hours, and evenings.
+            </p>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div
+          class="flex w-full max-w-[70rem] flex-col items-center justify-center overflow-hidden rounded-2xl border bg-white md:flex-row lg:gap-[5vw]"
+        >
+          <span
+            class="flex max-h-[20rem] w-full justify-center md:w-2/5 md:max-w-none"
+            ><img
+              src="assets/case-study/asset4.png"
+              alt="Wire EDM (Electrical Discharge Machine)
+"
+              width="400"
+              height="400"
+              class="h-[20rem] w-full rounded-t-2xl border-b object-contain p-3 md:rounded-t-none md:border-r md:border-b-transparent"
+              data-aos="zoom-in"
+          /></span>
+          <div class="w-full p-10 md:w-3/5">
+            <h2
+              data-aos="fade-up"
+              class="text-balance pb-4 text-lg font-semibold leading-[1.2] sm:text-xl md:text-2xl lg:lg:pr-10"
+            >
+              Wire EDM (Electrical Discharge Machine)
+            </h2>
+            <p
+              class="text-sm sm:text-base"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Estimated Electricity Savings = $2000/year <br />Estimated
+              Additional Savings = $2000 <br />
+              <br /><span class="font-semibold">Changes to implement</span>:
+              <br />Shut the machine down at the end of each day. This machine
+              was found to use over 3100 watts when sitting idle. Although there
+              may be a few instances throughout the year where the machine needs
+              to run for a few hours overnight, increasing the frequency of
+              shutdowns will lead to substantial savings
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="flex h-[2px] w-full bg-slate-500/10"></span>
+
+    <!-- Section 6 -->
+    <section class="sm-px-10 flex w-full justify-center px-6 py-20">
+      <div class="flex max-w-3xl flex-col gap-4 overflow-hidden">
+        <h1
+          class="py-3 text-3xl font-semibold lg:text-4xl"
+          data-aos="fade-down "
+        >
+          Major Results
+        </h1>
+        <p
+          class="rounded-2xl border bg-slate-500/10 p-6 font-normal"
+          data-aos="zoom-out"
+        >
+          Reducing the duty cycle of both the air compressor and the Wire EDM
+          unit from 100% to 30% for the remainder of their lifespan offers
+          substantial economic advantages. By modifying the duty cycle, we
+          extend the useful life of these units, thereby optimizing the return
+          on the initial investment.
+        </p>
+        <div class="font-normal" data-aos="fade-up" data-aos-delay="200">
+          Furthermore, this adjustment results in reduced annual maintenance
+          costs. Under the previous duty cycle, the maintenance cost would have
+          been around 1% of the initial equipment cost per year. By lowering the
+          duty cycle to 30%, the strain on the units significantly decreases,
+          thereby cutting down maintenance costs.
+
+          <br />
+          Specifically, for the air compressor, originally costing approximately
+          $60,000, the initial annual maintenance cost would have been about
+          $600. With a conservative 20% reduction due to the lower duty cycle,
+          the annual maintenance cost is now approximately $480. This results in
+          a yearly saving of $120. Over the remaining 10-year lifespan, these
+          savings amount to $1,200. For the Wire EDM unit, initially priced at
+          approximately $100,000, the original annual maintenance cost was
+          approximately $1,000. With the same 20% reduction due to the decreased
+          duty cycle, the annual maintenance cost drops to around $800,
+          generating a yearly saving of $200. Over the remaining 10 years of the
+          unit's lifespan, this saving adds up to $2,000.
+
+          <br />
+          <br />
+          <span class="rounded-lg border bg-slate-400/10 px-4 py-2">
+            In summary
+          </span>
+          <div class="pt-4">
+            By extending the lifespan of the equipment and reducing maintenance
+            costs over the next decade, the estimated total savings come to
+            $3,200. This scenario highlights the considerable financial benefits
+            of real-time monitoring and proactive management of critical assets.
+
+            <br />
+            <br />
+            Additionally, we have not factored in the costs associated with
+            production disruptions that could occur from unexpected equipment
+            failure due to high usage. The potential savings from avoiding these
+            disruptions further underline the value of our strategy.
+          </div>
+        </div>
+        <div>
+          <h1 class="py-3 text-xl font-semibold lg:text-2xl">
+            Ultrasonic Air Leak Detector
+          </h1>
+          <div
+            class="flex flex-col items-center justify-center gap-4 md:flex-row lg:gap-12"
+          >
+            <span
+              class="flex items-center justify-center overflow-hidden bg-white p-3"
+              ><img
+                src="assets/case-study/ultrasonic.png"
+                alt="Ultrasonic air leak detector"
+                width="400"
+                height="400"
+                class="w-[16rem] rounded-2xl object-cover md:rounded-t-none"
+                data-aos="zoom-in"
+            /></span>
+            <div class="w-full rounded-2xl border p-4 sm:p-10 md:w-3/5">
+              <h2 class="px-6 text-lg">
+                Below are the <span class="text-red-500">eight(8)</span> leaks
+                we found.
+              </h2>
+              <div
+                class="flex flex-wrap items-center justify-center gap-2 py-4"
+              >
+                <span
+                  class="flex h-20 w-20 justify-center overflow-hidden rounded-xl bg-slate-300/10"
+                  ><img
+                    src="assets/case-study/leak1.png"
+                    alt="leak"
+                    width="100"
+                    height="100"
+                    class="h-full w-full object-cover"
+                    data-aos="zoom-in"
+                /></span>
+                <span
+                  class="flex h-20 w-20 justify-center overflow-hidden rounded-xl bg-slate-300/10"
+                  ><img
+                    src="assets/case-study/leak2.png"
+                    alt="leak"
+                    width="100"
+                    height="100"
+                    class="h-full w-full object-cover"
+                    data-aos="zoom-in"
+                /></span>
+                <span
+                  class="flex h-20 w-20 justify-center overflow-hidden rounded-xl bg-slate-300/10"
+                  ><img
+                    src="assets/case-study/leak3.png"
+                    alt="leak"
+                    width="100"
+                    height="100"
+                    class="h-full w-full object-cover"
+                    data-aos="zoom-in"
+                /></span>
+                <span
+                  class="flex h-20 w-20 justify-center overflow-hidden rounded-xl bg-slate-300/10"
+                  ><img
+                    src="assets/case-study/leak4.png"
+                    alt="leak"
+                    width="100"
+                    height="100"
+                    class="h-full w-full object-cover"
+                    data-aos="zoom-in"
+                /></span>
+                <span
+                  class="flex h-20 w-20 justify-center overflow-hidden rounded-xl bg-slate-300/10"
+                  ><img
+                    src="assets/case-study/leak5.png"
+                    alt="leak"
+                    width="100"
+                    height="100"
+                    class="h-full w-full object-cover"
+                    data-aos="zoom-in"
+                /></span>
+                <span
+                  class="flex h-20 w-20 justify-center overflow-hidden rounded-xl bg-slate-300/10"
+                  ><img
+                    src="assets/case-study/leak6.png"
+                    alt="leak"
+                    width="100"
+                    height="100"
+                    class="h-full w-full object-cover"
+                    data-aos="zoom-in"
+                /></span>
+                <span
+                  class="flex h-20 w-20 justify-center overflow-hidden rounded-xl bg-slate-300/10"
+                  ><img
+                    src="assets/case-study/leak7.png"
+                    alt="leak"
+                    width="100"
+                    height="100"
+                    class="h-full w-full object-cover"
+                    data-aos="zoom-in"
+                /></span>
+                <span
+                  class="flex h-20 w-20 justify-center overflow-hidden rounded-xl bg-slate-300/10"
+                  ><img
+                    src="assets/case-study/leak8.png"
+                    alt="leak"
+                    width="100"
+                    height="100"
+                    class="h-full w-full object-cover"
+                    data-aos="zoom-in"
+                /></span>
+              </div>
+            </div>
+          </div>
+          <p
+            class="mt-4 rounded-2xl border bg-slate-700/5 p-6 font-normal"
+            data-aos="fade-up"
+          >
+            The ultrasonic leak detector helped us find the leaks in a noisy
+            manufacturing shop environment. Once close, we could hear the leaks
+            with our ears, and in some cases feel them with our hands. The leaks
+            are severe enough that the air compressor is constantly running to
+            compensate.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <span class="flex h-[2px] w-full bg-slate-700/5"></span>
+    <!-- Section 7 -->
+    <section class="sm-px-10 flex w-full justify-center px-6 py-20">
+      <div class="flex max-w-3xl flex-col gap-4">
+        <h1
+          class="w-full py-3 text-start text-3xl font-semibold lg:text-4xl"
+          data-aos="fade-down"
+        >
+          Conclusion
+        </h1>
+        <p data-aos="fade-up">
+          In conclusion PolySense Solutions, employing its advanced AMP/BOLT
+          technologies, illustrated significant potential for energy savings in
+          the manufacturing industry. Our intervention at this manufacturing
+          facility allowed us to swiftly and non-invasively pinpoint
+          inefficiencies, culminating in direct annual energy savings of $8500
+          if suggested changes in this report are implemented, which represents
+          a substantial 28% reduction in their current annual electricity
+          expenditure. These savings primarily arose from rectifying operational
+          issues in three key pieces of machinery: an air compressor, a wire EDM
+          unit, and a rooftop HVAC unit.
+          <br />Additionally, addressing these issues will contribute to an
+          indirect cost saving of $3200 for the client in the form of reduced
+          maintenance on this equipment. <br />
+          <br />Moreover, our initiatives have considerably reduced the load on
+          the electrical grid by 90,000 kWh each year, fostering environmental
+          sustainability and enhancing the stability of the grid. <br />Our
+          technology also enhanced the client’s operational visibility, enabling
+          more effective management and optimal utilization of their equipment.
+          <br />
+          <br />This case study underscores the transformative value that
+          advanced monitoring technologies like our AMP & BOLT can offer to
+          energy-conscious organizations, with substantial direct and indirect
+          financial savings, environmental benefits, and operational
+          efficiencies.
+        </p>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer id="footer" data-aos="fade-up"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Animation occurs only once
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

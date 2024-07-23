@@ -1,0 +1,85 @@
+  <!-- Previous section -->
+  <section
+        class="flex flex-wrap items-center justify-center gap-10 px-6 text-base sm:px-10"
+      >
+        <div
+          class="flex w-[28rem] flex-col gap-2 rounded-2xl border border-black/50 bg-white/10 px-6 py-4"
+        >
+          <span class="flex gap-3"
+            ><div class="rounded-xl bg-green-500 px-4 py-1 text-black">
+              Utilization
+            </div>
+            <div class="rounded-xl bg-blue-500 px-4 py-1 text-black">
+              Power Usage
+            </div>
+          </span>
+          <h1 class="text-lg font-semibold">ORGANISATION SUMMARY</h1>
+          <p class="pb-3 text-sm">
+            Effortlessly Track Your Organization's Reduction in Downtime and
+            Minimization of Resource Waste
+          </p>
+          <span
+            class="flex w-full justify-center overflow-hidden rounded-3xl border"
+            ><img
+              src="assets/index/organisation-summary.png"
+              alt="organisation summary"
+              width="400"
+              height="300"
+              class="h-full w-full scale-[1.03] object-cover"
+          /></span>
+        </div>
+        <!-- 2 -->
+        <div
+          class="flex w-[28rem] flex-col gap-2 rounded-2xl border border-black/50 bg-white/10 px-6 py-4"
+        >
+          <span class="flex gap-3"
+            ><div class="rounded-xl bg-yellow-500 px-4 py-1 text-black">
+              Ownership Costs
+            </div>
+            <div class="rounded-xl bg-orange-500 px-4 py-1 text-black">
+              Electricity Maps
+            </div>
+          </span>
+          <h1 class="text-lg font-semibold">WASTE MANAGEMENT</h1>
+          <p class="pb-3 text-sm">
+            Finding waste has never been easier with automatic and filterable
+            reports and dashboards
+          </p>
+          <span
+            class="flex w-full justify-center overflow-hidden rounded-3xl border"
+            ><img
+              src="assets/index/assets.png"
+              alt="organisation summary"
+              width="400"
+              height="300"
+              class="h-full w-full scale-[1.03] object-cover"
+          /></span>
+        </div>
+        <!-- 3 -->
+        <div
+          class="flex w-[28rem] flex-col gap-2 rounded-2xl border border-black/50 bg-white/10 px-6 py-4"
+        >
+          <span class="flex gap-3"
+            ><div class="rounded-xl bg-green-500 px-4 py-1 text-black">
+              Active
+            </div>
+            <div class="rounded-xl bg-red-500 px-4 py-1 text-black">
+              Inactive
+            </div>
+          </span>
+          <h1 class="text-lg font-semibold">REALTIME TRACKING</h1>
+          <p class="pb-3 text-sm">
+            Effortlessly Track Your Organization's Reduction in Downtime and
+            Minimization of Resource Waste
+          </p>
+          <span
+            class="flex w-full justify-center overflow-hidden rounded-t-3xl border"
+            ><img
+              src="assets/index/realtime-status.png"
+              alt="organisation summary"
+              width="400"
+              height="300"
+              class="h-full w-full scale-[1.03] object-cover"
+          /></span>
+        </div>
+      </section>

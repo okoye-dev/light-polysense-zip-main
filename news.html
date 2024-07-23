@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polysense Solutions</title>
+    <link rel="stylesheet" href="styles/output.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/form-logo.png" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-b from-blue-50 via-blue-50 tracking-tight text-black"
+  >
+    <div id="navbar"></div>
+    <!-- Solutions Hover Menu -->
+    <div
+      onmouseover="slideSolutionsNavIn()"
+      onmouseout="slideSolutionsNavOut()"
+      id="solutions-nav"
+      class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex"
+    >
+      <ul
+        class="flex flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:translate-x-16"
+      >
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/for-labs-and-hospitals.html"
+            >For Labs & Hospitals</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/for-additive-manufacturing.html"
+            >For Additive Manufacturing</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out hover:text-green-500"
+            href="/for-manufacturing-and-industrial-facilities.html"
+            >For Manufacturing and Industrial Facilities</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/facility-mapping.html"
+            >Facility Mapping</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/inventory-management.html"
+            >Inventory Management</a
+          >
+        </li>
+
+        <li class="w-full hover:text-green-500" onclick="closeNav()">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out"
+            href="/case-study.html"
+            onclick="closeNav()"
+            >Case Study</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- About Hover Menu -->
+    <div
+      onmouseover="slideIn()"
+      onmouseout="slideOut()"
+      id="about-nav"
+      class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex"
+    >
+      <ul
+        class="flex w-[12rem] flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:-ml-24 lg:translate-x-16"
+      >
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/about-us.html"
+            >About Us</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/leadership.html"
+            >Leadership</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/investors.html"
+            >Investors</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/careers.html"
+            >Careers</a
+          >
+        </li>
+        <li onclick="closeNav()" class="w-full hover:text-green-500">
+          <a class="px-5 py-2 duration-300 ease-in-out" href="/news.html"
+            >News</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Side Navigation -->
+    <div
+      id="sidenav"
+      class="fixed top-0 z-[100] h-[120vh] w-full translate-x-full overflow-x-hidden duration-300 ease-in-out md:hidden"
+    >
+      <nav
+        id="click-outside"
+        class="relative top-0 flex h-full items-start justify-end md:hidden"
+      >
+        <img
+          onclick="closeNav()"
+          src="assets/navbar/close.svg"
+          alt="close"
+          width="20"
+          height="20"
+          class="absolute right-7 top-7 sm:right-10"
+        />
+        <div
+          onclick="closeNav()"
+          class="flex h-full w-1/4 flex-col items-start px-[10%] font-medium backdrop-blur-sm"
+        ></div>
+        <ul
+          class="flex h-full w-3/4 flex-col items-start gap-2 border-l border-green-200 bg-white px-[10%] py-14 text-sm font-medium"
+        >
+          <li>
+            <a
+              href="/"
+              onclick="closeNav()"
+              class="text-lg duration-300 hover:text-green-500"
+              >Home</a
+            >
+          </li>
+          <li class="flex flex-col">
+            <p id="about" class="text-lg text-black/50">About</p>
+            <div class="py-3 text-start">
+              <ul class="flex flex-col gap-3">
+                <li>
+                  <a
+                    href="/about-us.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/leadership.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Leadership</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/investors.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Investors</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/careers.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/news.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >News</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex w-60 flex-col">
+            <p id="solutions" class="text-lg text-black/50">Solutions</p>
+            <div class="py-3 text-start">
+              <ul class="flex flex-col gap-3">
+                <li>
+                  <a
+                    href="/for-labs-and-hospitals.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Labs & Hospitals</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/for-additive-manufacturing.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Additive Manufacturing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/for-manufacturing-and-industrial-facilities.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >For Manufacturing and Industrial Facilities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/inventory-management.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Inventory Management</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/facility-mapping.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Facility Mapping</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/case-study.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Case Study</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a
+              href="/contact.html"
+              class="text-lg duration-300 hover:text-green-500"
+              >Contact</a
+            >
+          </li>
+
+          <li>
+            <a href="contact.html" class="duration-300 ease-in-out"
+              ><button
+                type="button"
+                class="flex items-center justify-center text-nowrap rounded-xl bg-green-400 px-4 py-2 font-medium text-white duration-300 ease-in-out hover:rounded-md hover:bg-green-500"
+              >
+                Request a demo
+              </button></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Content -->
+    <div class="flex w-full flex-col items-center">
+      <h1
+        class="mt-20 w-full max-w-[60rem] px-6 py-4 text-2xl font-semibold sm:px-10 md:text-3xl"
+        data-aos="zoom-in"
+      >
+        Latest News
+      </h1>
+      <div
+        class="mb-20 flex w-full max-w-[60rem] grid-cols-6 grid-rows-8 flex-col items-center justify-center gap-6 px-6 sm:px-10 md:grid"
+      >
+        <!-- Row 1 -->
+        <a
+          href="/blog-post.html"
+          class="group col-span-6 row-span-2 flex max-w-[24rem] flex-col overflow-hidden rounded-2xl bg-white md:h-[20rem] md:max-w-full md:flex-row"
+          data-aos="fade-up"
+        >
+          <span
+            class="flex w-full items-center justify-center overflow-hidden bg-black/10 md:w-1/2"
+            ><img
+              src="assets/news/top-img.jpg"
+              alt="hardware management"
+              width="400"
+              height="300"
+              class="h-full w-full object-cover duration-300 group-hover:scale-105"
+          /></span>
+          <div
+            class="flex w-full flex-col justify-center gap-3 p-6 font-semibold md:w-1/2 md:p-12"
+          >
+            <h2
+              class="w-fit rounded-md bg-slate-400/20 p-2 text-xs font-normal text-black/70"
+              data-aos="zoom-in"
+            >
+              UPDATE
+            </h2>
+            <p class="w-full text-lg md:text-xl lg:text-2xl">
+              How Real-Time Sensor Data is Revolutionizing Additive
+              Manufacturing
+            </p>
+            <p class="text-sm text-black/70 md:text-base">June 14, 2024</p>
+          </div>
+        </a>
+
+        <!-- Row 2 -->
+        <a
+          href="/blog-post.html"
+          class="group col-span-3 row-span-2 flex h-[25rem] max-w-[24rem] flex-col overflow-hidden rounded-2xl bg-white md:max-w-full lg:h-[24rem]"
+          data-aos="fade-up"
+        >
+          <span
+            class="flex w-full items-center justify-center overflow-hidden bg-black/10"
+            ><img
+              src="assets/news/top-img.jpg"
+              alt="hardware management"
+              width="400"
+              height="300"
+              class="h-full w-full object-cover duration-300 group-hover:scale-105"
+          /></span>
+          <div
+            class="flex h-1/2 w-full flex-col gap-3 p-6 font-semibold sm:p-4"
+          >
+            <h2
+              class="w-fit rounded-md bg-slate-400/20 p-2 text-xs font-normal text-black/70"
+              data-aos="zoom-in"
+            >
+              QUICK READ
+            </h2>
+            <p class="w-5/6 text-lg">
+              The Benefits of Hardware Monitoring in Bio-Research Facilities
+            </p>
+            <p class="absolute bottom-6 text-sm text-black/70">June 14, 2024</p>
+          </div>
+        </a>
+        <a
+          href="/blog-post.html"
+          class="group col-span-3 row-span-2 flex h-[25rem] max-w-[24rem] flex-col overflow-hidden rounded-2xl bg-white md:max-w-full lg:h-[24rem]"
+          data-aos="fade-up"
+        >
+          <span
+            class="flex w-full items-center justify-center overflow-hidden bg-black/10"
+            ><img
+              src="assets/news/top-img.jpg"
+              alt="hardware management"
+              width="400"
+              height="300"
+              class="h-full w-full object-cover duration-300 group-hover:scale-105"
+          /></span>
+          <div
+            class="flex h-1/2 w-full flex-col gap-3 p-6 font-semibold sm:p-4"
+          >
+            <h2
+              class="w-fit rounded-md bg-slate-400/20 p-2 text-xs font-normal text-black/70"
+              data-aos="zoom-in"
+            >
+              UPDATE
+            </h2>
+            <p class="w-5/6 text-lg">
+              Optimizing Energy Use in Manufacturing: The Role of Advanced
+              Sensors
+            </p>
+            <p class="absolute bottom-6 text-sm text-black/70">June 14, 2024</p>
+          </div>
+        </a>
+
+        <!-- Row 3 -->
+        <a
+          href="/blog-post.html"
+          class="group col-span-3 row-span-2 flex h-[24rem] max-w-[24rem] flex-col overflow-hidden rounded-2xl bg-white lg:col-span-2 lg:h-[22rem] lg:max-w-full"
+          data-aos="fade-up"
+        >
+          <span
+            class="flex w-full items-center justify-center overflow-hidden bg-black/10"
+            ><img
+              src="assets/news/top-img.jpg"
+              alt="hardware management"
+              width="400"
+              height="300"
+              class="h-full w-full object-cover duration-300 group-hover:scale-105"
+          /></span>
+          <div
+            class="flex h-1/2 w-full flex-col gap-3 p-6 font-semibold sm:p-4"
+          >
+            <h2
+              class="w-fit rounded-md bg-slate-400/20 p-2 text-xs font-normal text-black/70"
+              data-aos="zoom-in"
+            >
+              QUICK READ
+            </h2>
+            <p class="w-full text-lg">
+              Predictive Maintenance: How Sensors Can Prevent Costly Equipment
+              Failures
+            </p>
+            <p class="absolute bottom-6 text-sm text-black/70">June 14, 2024</p>
+          </div>
+        </a>
+        <a
+          href="/blog-post.html"
+          class="group col-span-3 row-span-2 flex h-[24rem] max-w-[24rem] flex-col overflow-hidden rounded-2xl bg-white lg:col-span-2 lg:h-[22rem] lg:max-w-full"
+          data-aos="fade-up"
+        >
+          <span
+            class="flex w-full items-center justify-center overflow-hidden bg-black/10"
+            ><img
+              src="assets/news/top-img.jpg"
+              alt="hardware management"
+              width="400"
+              height="300"
+              class="h-full w-full object-cover duration-300 group-hover:scale-105"
+          /></span>
+          <div
+            class="flex h-1/2 w-full flex-col gap-3 p-6 font-semibold sm:p-4"
+          >
+            <h2
+              class="w-fit rounded-md bg-slate-400/20 p-2 text-xs font-normal text-black/70"
+              data-aos="zoom-in"
+            >
+              RELEASE
+            </h2>
+            <p class="w-full text-lg">
+              Enhancing Food Production Efficiency with Environmental Monitoring
+              Sensors
+            </p>
+            <p class="absolute bottom-6 text-sm text-black/70">June 14, 2024</p>
+          </div>
+        </a>
+        <a
+          href="/blog-post.html"
+          class="group col-span-3 row-span-2 flex h-[24rem] max-w-[24rem] flex-col overflow-hidden rounded-2xl bg-white lg:col-span-2 lg:h-[22rem] lg:max-w-full"
+          data-aos="fade-up"
+        >
+          <span
+            class="flex w-full items-center justify-center overflow-hidden bg-black/10"
+            ><img
+              src="assets/news/top-img.jpg"
+              alt="hardware management"
+              width="400"
+              height="300"
+              class="h-full w-full object-cover duration-300 group-hover:scale-105"
+          /></span>
+          <div
+            class="flex h-1/2 w-full flex-col gap-3 p-6 font-semibold sm:p-4"
+          >
+            <h2
+              class="w-fit rounded-md bg-slate-400/20 p-2 text-xs font-normal text-black/70"
+              data-aos="zoom-in"
+            >
+              QUICK READ
+            </h2>
+            <p class="w-full text-lg">
+              Transforming Raw Data into Actionable Insights for Industrial
+              Applications
+            </p>
+            <p class="absolute bottom-6 text-sm text-black/70">June 14, 2024</p>
+          </div>
+        </a>
+        <a
+          href="/blog-post.html"
+          class="group col-span-3 row-span-2 flex h-[24rem] max-w-[24rem] flex-col overflow-hidden rounded-2xl bg-white lg:col-span-2 lg:h-[22rem] lg:max-w-full"
+          data-aos="fade-up"
+        >
+          <span
+            class="flex w-full items-center justify-center overflow-hidden bg-black/10"
+            ><img
+              src="assets/news/top-img.jpg"
+              alt="hardware management"
+              width="400"
+              height="300"
+              class="h-full w-full object-cover duration-300 group-hover:scale-105"
+          /></span>
+          <div
+            class="flex h-1/2 w-full flex-col gap-3 p-6 font-semibold sm:p-4"
+          >
+            <h2
+              class="w-fit rounded-md bg-slate-400/20 p-2 text-xs font-normal text-black/70"
+              data-aos="zoom-in"
+            >
+              UPDATE
+            </h2>
+            <p class="w-full text-lg">
+              The Future of Asset Utilization: Leveraging Sensor Technology in
+              Various Industries
+            </p>
+            <p class="absolute bottom-6 text-sm text-black/70">June 14, 2024</p>
+          </div>
+        </a>
+        <a
+          href="/blog-post.html"
+          class="group col-span-3 row-span-2 flex h-[24rem] max-w-[24rem] flex-col overflow-hidden rounded-2xl bg-white lg:col-span-2 lg:h-[22rem] lg:max-w-full"
+          data-aos="fade-up"
+        >
+          <span
+            class="flex w-full items-center justify-center overflow-hidden bg-black/10"
+            ><img
+              src="assets/news/top-img.jpg"
+              alt="hardware management"
+              width="400"
+              height="300"
+              class="h-full w-full object-cover duration-300 group-hover:scale-105"
+          /></span>
+          <div
+            class="flex h-1/2 w-full flex-col gap-3 p-6 font-semibold sm:p-4"
+          >
+            <h2
+              class="w-fit rounded-md bg-slate-400/20 p-2 text-xs font-normal text-black/70"
+              data-aos="zoom-in"
+            >
+              UPDATE
+            </h2>
+            <p class="w-full text-lg">
+              Real-World Case Studies: Success Stories of PolySense Sensor
+              Implementations
+            </p>
+            <p class="absolute bottom-6 text-sm text-black/70">June 14, 2024</p>
+          </div>
+        </a>
+        <a
+          href="/blog-post.html"
+          class="group col-span-3 row-span-2 flex h-[24rem] max-w-[24rem] flex-col overflow-hidden rounded-2xl bg-white lg:col-span-2 lg:h-[22rem] lg:max-w-full"
+          data-aos="fade-up"
+        >
+          <span
+            class="flex w-full items-center justify-center overflow-hidden bg-black/10"
+            ><img
+              src="assets/news/top-img.jpg"
+              alt="hardware management"
+              width="400"
+              height="300"
+              class="h-full w-full object-cover duration-300 group-hover:scale-105"
+          /></span>
+          <div
+            class="flex h-1/2 w-full flex-col gap-3 p-6 font-semibold sm:p-4"
+          >
+            <h2
+              class="w-fit rounded-md bg-slate-400/20 p-2 text-xs font-normal text-black/70"
+              data-aos="zoom-in"
+            >
+              UPDATE
+            </h2>
+            <p class="w-full text-lg">
+              Optimizing Energy Use in Manufacturing: The Role of Advanced
+              Sensors
+            </p>
+            <p class="absolute bottom-6 text-sm text-black/70">June 14, 2024</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Careers -->
+      <div
+        class="flex w-full flex-col items-center justify-center gap-4 bg-white py-20 font-semibold"
+      >
+        <h1
+          class="text-3xl text-green-500 sm:text-4xl md:text-5xl"
+          data-aos="zoom-in"
+        >
+          Careers
+        </h1>
+        <p
+          class="text-balance px-10 pb-6 text-center text-sm sm:text-lg"
+          data-aos="fade-up"
+        >
+          Join the PolySense team of innovators and disruptors,<br
+            class="hidden md:flex"
+          />
+          you too can make an impact in the world.
+        </p>
+        <a
+          data-aos="fade-up"
+          data-aos-delay="300"
+          href="/careers.html"
+          class="group relative flex h-[27rem] w-4/5 max-w-[60rem] overflow-hidden rounded-2xl sm:h-[32rem] sm:w-[35rem] md:w-[40rem] lg:h-[40rem] lg:w-[65vw]"
+        >
+          <img
+            src="assets/news/careers-img.jpg"
+            alt="engineers"
+            width="600"
+            height="500"
+            class="h-full w-full object-cover duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 via-black/80 via-[70%] px-6 py-6 pt-10 text-xl font-normal text-white sm:px-9 sm:text-2xl md:px-12 md:py-10 md:text-3xl lg:px-16 lg:text-4xl"
+            data-aos="fade-up"
+          >
+            <h1 class="text-balance lg:text-wrap">
+              Calling talented Engineers,<br class="hidden lg:flex" />
+              Researchers, and Marketers
+            </h1>
+            <p
+              class="w-3/4 py-2 text-sm sm:text-base md:text-lg lg:w-2/3"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Do you think you have what it takes? See the roles we are hiring
+              for and give us a call.
+            </p>
+            <img
+              src="assets/news/arrow.svg"
+              alt="open"
+              width="20"
+              height="20"
+              class="absolute bottom-8 right-6 h-10 w-10 rounded-full bg-white/20 p-1 duration-300 group-hover:-rotate-[30deg] group-hover:bg-white/40 sm:right-9 md:bottom-10 md:right-12 md:h-14 md:w-14 lg:right-16"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Animation occurs only once
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

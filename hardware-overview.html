@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polysense Solutions</title>
+    <link rel="stylesheet" href="styles/output.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/form-logo.png" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-b from-blue-50 tracking-tight text-black"
+  >
+    <div id="navbar"></div>
+    <!-- About Hover Menu -->
+    <div
+      onmouseover="slideIn()"
+      onmouseout="slideOut()"
+      id="about-nav"
+      class="fixed -top-[18rem] left-[40%] z-[99] hidden pt-10 opacity-0 transition-all duration-500 ease-in-out sm:flex"
+    >
+      <ul
+        class="flex flex-col gap-2 rounded-xl border bg-white py-5 shadow-md lg:translate-x-16"
+      >
+        <li class="w-full">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out hover:text-green-500"
+            href="/inventory-management.html"
+            onclick="closeNav()"
+            >Inventory Management</a
+          >
+        </li>
+        <li class="w-full">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out hover:text-green-500"
+            href="/facility-mapping.html"
+            onclick="closeNav()"
+            >Facility Mapping</a
+          >
+        </li>
+
+        <li class="w-full">
+          <a
+            class="px-5 py-2 duration-300 ease-in-out hover:text-green-500"
+            href="/case-study.html"
+            onclick="closeNav()"
+            >Case Study</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Side Navigation -->
+    <div
+      id="sidenav"
+      class="fixed top-0 z-[100] h-[120vh] w-full translate-x-full overflow-x-hidden duration-300 ease-in-out sm:hidden"
+    >
+      <nav
+        id="click-outside"
+        class="relative top-0 flex h-full items-start justify-end sm:hidden"
+      >
+        <img
+          onclick="closeNav()"
+          src="assets/navbar/close.svg"
+          alt="close"
+          width="20"
+          height="20"
+          class="absolute right-7 top-8"
+        />
+        <div
+          onclick="closeNav()"
+          class="flex h-full w-1/4 flex-col items-start px-[10%] text-3xl font-medium backdrop-blur-sm"
+        ></div>
+        <ul
+          class="flex h-full w-3/4 flex-col items-start gap-8 border-l border-green-200 bg-white px-[10%] py-20 text-3xl font-medium"
+        >
+          <li>
+            <a
+              href="/"
+              onclick="closeNav()"
+              class="duration-300 hover:text-green-500"
+              >Home</a
+            >
+          </li>
+          <li class="flex flex-col">
+            <p id="about">About</p>
+            <div class="py-3 text-start text-lg">
+              <ul class="flex flex-col gap-3">
+                <li>
+                  <a
+                    href="/inventory-management.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Inventory Management</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/facility-mapping.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Facility Mapping</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/hardware-overview.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Hardware Overview</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/network-diagram.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Network Diagram</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/case-study.html"
+                    class="duration-300 hover:text-green-500"
+                    onclick="closeNav()"
+                    >Case Study</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/contact.html" class="duration-300 hover:text-green-500"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="duration-300 ease-in-out"
+              ><button
+                type="button"
+                class="flex items-center justify-center text-nowrap rounded-xl bg-red-500 px-4 py-2 text-lg font-medium text-black duration-300 ease-in-out hover:rounded-md hover:bg-red-400"
+              >
+                Request a demo
+              </button></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Content  -->
+    <section
+      class="mt-20 flex flex-col items-center justify-center gap-20 bg-white/5 px-6 py-10 sm:px-10 md:py-20 lg:py-16"
+    >
+      <div
+        class="flex flex-col items-center justify-center gap-5 md:flex-row md:justify-between md:gap-12 lg:w-[90%]"
+      >
+        <div class="flex flex-col items-start justify-center gap-3 md:w-1/2">
+          <h1 class="text-4xl font-bold text-green-500 lg:text-5xl">
+            PolySense HUB
+          </h1>
+          <p class="lg:text-lg">
+            <span class="pb-1 text-lg text-green-200 lg:text-xl">
+              This is the only device that needs an internet connection. </span
+            ><br />
+            Cellular connection is possible if Wi-Fi or Ethernet are not. The
+            PolySense HUB wirelessly receives sensor data from up to 500 meters
+            away using the LoRaWAN protocol. This means no Wi-Fi, ZigBee, or
+            Bluetooth extenders, and significantly more security for your
+            critical IT infrastructure not to mention less troLbleshooting and
+            ease of setup.
+          </p>
+        </div>
+        <span
+          class="flex h-40 w-[20rem] items-center justify-center overflow-hidden rounded-3xl bg-white md:h-60 md:w-1/2"
+        >
+          <img
+            src="assets/hardware-overview/polysense-hub.png"
+            alt="PolySense ONE"
+            width="300"
+            height="200"
+            class="h-full w-full scale-110 object-contain"
+        /></span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center gap-5 md:flex-row-reverse md:justify-between md:gap-12 lg:w-[90%]"
+      >
+        <div class="flex flex-col items-start justify-center gap-3 md:w-1/2">
+          <h1 class="text-4xl font-bold text-green-500 lg:text-5xl">
+            PolySense NODE
+          </h1>
+          <p class="lg:text-lg">
+            The NODE is our multipurpose sensor. It is battery powered and
+            communicates wirelessly over long range radio (LoRaWAN). <br /><span
+              class="pt-1"
+              ><h2 class="text-lg text-green-200 lg:text-xl">
+                It is capable of sensing:
+              </h2>
+              - Ambient Temperature <br />
+              - Ambient Humidity <br />
+              - Vibration, acceleration, sound motion & light <br />
+              - Analog or digital signals from other equipment
+            </span>
+          </p>
+        </div>
+        <span
+          class="flex h-40 w-[20rem] items-center justify-center overflow-hidden rounded-3xl bg-white md:h-60 md:w-1/2"
+        >
+          <img
+            src="assets/hardware-overview/polysense-node.png"
+            alt="PolySense ONE"
+            width="300"
+            height="200"
+            class="h-3/4 w-full scale-150 object-contain"
+        /></span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center gap-5 md:flex-row md:justify-between md:gap-12 lg:w-[90%]"
+      >
+        <div class="flex flex-col items-start justify-center gap-3 md:w-1/2">
+          <h1 class="text-4xl font-bold text-green-500 lg:text-5xl">
+            PolySense AMP <br />
+            <span class="text-3xl text-green-200 lg:text-4xl"
+              >(20-600 Amps)</span
+            >
+          </h1>
+          <p class="lg:text-lg">
+            <span class="pb-1 text-lg text-green-200 lg:text-xl">
+              No running wires or conduit, installs in minutes.</span
+            ><br />
+            For assets that are 3-phase or hardwired, we use the AMP.
+            <span class="-mt-1 flex"></span>
+            The AMP is a battery-powered sensor that non-invasively measures the
+            electrical activity of the connected asset. <br />It simply clips
+            over one of of the main wires of the asset and begins collecting
+            eectrical data.
+          </p>
+        </div>
+        <span
+          class="flex h-40 w-[20rem] items-center justify-center overflow-hidden rounded-3xl bg-white md:h-60 md:w-1/2"
+        >
+          <img
+            src="assets/hardware-overview/polysense-amp.png"
+            alt="PolySense ONE"
+            width="300"
+            height="200"
+            class="h-full w-full scale-125 object-contain"
+        /></span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center gap-5 md:flex-row-reverse md:justify-between md:gap-12 lg:w-[90%]"
+      >
+        <div class="flex flex-col items-start justify-center gap-3 md:w-1/2">
+          <h1 class="text-4xl font-bold text-green-500 lg:text-5xl">
+            PolySense ICE <br />
+          </h1>
+          <p class="lg:text-lg">
+            <span class="pb-2 text-lg text-green-200 lg:text-xl">
+              The ICE is the ultimate cold storage monitor. It will send you
+              critical alerts when temperatures rise or the door is open for too
+              long.</span
+            >
+            <span class="flex"></span>
+            It also records when the door/lid of a freezer or refrigerator is
+            opened to better understand how often the asset is accessed, and how
+            long the door is open on average. Remote Temperature monitoring of
+            -200°C to +1300°C possible with accurate thermocouple.
+          </p>
+        </div>
+        <span
+          class="flex h-40 w-[20rem] items-center justify-center overflow-hidden rounded-3xl bg-white md:h-60 md:w-1/2"
+        >
+          <img
+            src="assets/hardware-overview/polysense-ice.png"
+            alt="PolySense ONE"
+            width="300"
+            height="200"
+            class="h-full w-full object-contain"
+        /></span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center gap-5 md:flex-row md:justify-between md:gap-12 lg:w-[90%]"
+      >
+        <div class="flex flex-col items-start justify-center gap-3 md:w-1/2">
+          <h1 class="text-4xl font-bold text-green-500 lg:text-5xl">
+            PolySense BIO <br />
+          </h1>
+          <p class="lg:text-lg">
+            <span class="pb-2 text-lg text-green-200 lg:text-xl">
+              The BIO is your essential monitor for CO2 incubators.</span
+            >
+            <span class="flex"></span>
+            It wirelessly measures CO2 levels from 0-10%, along with temperature
+            and humidity. Equipped with LoRaWAN technology, it ensures reliable
+            and real-time communication for optimal monitoring and control of
+            incubator conditions without complicated installation process.
+          </p>
+        </div>
+        <span
+          class="flex h-40 w-[20rem] items-center justify-center overflow-hidden rounded-3xl bg-white md:h-60 md:w-1/2"
+        >
+          <img
+            src="assets/hardware-overview/polysense-bio.png"
+            alt="PolySense ONE"
+            width="300"
+            height="200"
+            class="h-full w-full object-contain"
+        /></span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center gap-5 md:flex-row-reverse md:justify-between md:gap-12 lg:w-[90%]"
+      >
+        <div class="flex flex-col items-start justify-center gap-3 md:w-1/2">
+          <h1 class="text-4xl font-bold text-green-500 lg:text-5xl">
+            PolySense LEAK <br />
+          </h1>
+          <p class="lg:text-lg">
+            <span class="pb-2 text-lg text-green-200 lg:text-xl">
+              This advanced leak detection sensor harnesses rope-style
+              technology for superior sensitivity and accuracy.</span
+            >
+            <span class="flex"></span>
+            The LEAK ensures early identification of liquid leaks to prevent
+            potential damage. Standard rope length is 3 meters. Up to 3 ropes
+            can be connected in series to obtain 9 meters of leak detection.
+          </p>
+        </div>
+        <span
+          class="flex h-40 w-[20rem] items-center justify-center overflow-hidden rounded-3xl bg-white md:h-60 md:w-1/2"
+        >
+          <img
+            src="assets/hardware-overview/polysense-leak.png"
+            alt="PolySense ONE"
+            width="300"
+            height="200"
+            class="h-full w-full object-contain"
+        /></span>
+      </div>
+
+      <div
+        class="flex w-full flex-col items-center justify-center gap-5 md:flex-row md:gap-12 lg:w-[90%]"
+      >
+        <div class="flex flex-col items-start justify-start gap-3 md:w-1/2">
+          <h1 class="text-4xl font-bold text-green-500 lg:text-5xl">
+            PolySense BOLT
+          </h1>
+          <p class="lg:text-lg">
+            The BOLT is a smart-plug that communicates wirelessly over
+            LoRaWAN.<br /><span class="pt-1"
+              ><h2 class="text-lg text-green-200 lg:text-xl">
+                What it can do:
+              </h2>
+              - Record how much electricity an asset uses2 and when it uses
+              <br />
+              - Record how often assets are used and track downtime <br />
+              - Send alerts when an asset stops/starts using power
+            </span>
+          </p>
+        </div>
+        <span
+          class="flex h-40 w-[20rem] items-center justify-center overflow-hidden rounded-3xl bg-white md:h-60 md:w-1/2"
+        >
+          <img
+            src="assets/hardware-overview/polysense-bolt.png"
+            alt="PolySense ONE"
+            width="300"
+            height="200"
+            class="h-3/4 w-full scale-150 object-contain"
+        /></span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center gap-5 md:flex-row-reverse md:justify-between md:gap-12 lg:w-[90%]"
+      >
+        <div class="flex flex-col items-start justify-center gap-3 md:w-1/2">
+          <h1 class="text-4xl font-bold text-green-500 lg:text-5xl">
+            PolySense FLOW <br />
+          </h1>
+          <p class="lg:text-lg">
+            <span class="pb-2 text-lg text-green-200 lg:text-xl">
+              The PolySense FLOW is an ultrasonic non-invasive flow meter.
+              Simply clamp onto the pipe, no cutting required.</span
+            >
+            <span class="flex"></span>
+            The FLOW fits pipe sizes from 1/4 inch to 2 inch diameters, and is
+            accurate to +/- 2% of the flow rate up to 100 L/min
+          </p>
+        </div>
+        <span
+          class="flex h-40 w-[20rem] items-center justify-center overflow-hidden rounded-3xl bg-white md:h-60 md:w-1/2"
+        >
+          <img
+            src="assets/hardware-overview/polysense-flow.png"
+            alt="PolySense ONE"
+            width="300"
+            height="200"
+            class="h-full w-full object-contain"
+        /></span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center gap-5 md:flex-row md:justify-between md:gap-12 lg:w-[90%]"
+      >
+        <div class="flex flex-col items-start justify-center gap-3 md:w-1/2">
+          <h1 class="text-4xl font-bold text-green-500 lg:text-5xl">
+            PolySense DISTANCE <br />
+          </h1>
+          <p class="lg:text-lg">
+            <span class="pb-2 text-lg text-green-200 lg:text-xl">
+              The PolySense DISTANCE is an advanced laser distance sensor
+              designed for high-precision monitoring of iquid and powder
+              levels.</span
+            >
+            <span class="flex"></span>
+            Engineered for reliability and easy integration, this versatile
+            sensor is ideal for various industries including manufacturing, food
+            production, and bio-research. Transforms distance data into
+            actionable insights, empowering you to manage resources proactively
+            and efficiently.
+          </p>
+        </div>
+        <span
+          class="flex h-40 w-[20rem] items-center justify-center overflow-hidden rounded-3xl bg-white md:h-60 md:w-1/2"
+        >
+          <img
+            src="assets/hardware-overview/polysense-flow.png"
+            alt="PolySense ONE"
+            width="300"
+            height="200"
+            class="h-full w-full object-contain"
+        /></span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center gap-5 md:flex-row-reverse md:justify-between md:gap-12 lg:w-[90%]"
+      >
+        <div class="flex flex-col items-start justify-center gap-3 md:w-1/2">
+          <h1 class="text-4xl font-bold text-green-500 lg:text-5xl">
+            PolySense ALERT <br />
+          </h1>
+          <p class="lg:text-lg">
+            The PolySense ALERT is a tri-colored light tower designed to
+            complement text and email notifications by providing immediate,
+            visual status indicators. Tailor the light status to fit your
+            specific application for a fully integrated, multi-channel alert
+            system
+          </p>
+        </div>
+        <span
+          class="flex h-40 w-[20rem] items-center justify-center overflow-hidden rounded-3xl bg-white md:h-60 md:w-1/2"
+        >
+          <img
+            src="assets/hardware-overview/polysense-alert.png"
+            alt="PolySense ONE"
+            width="300"
+            height="200"
+            class="h-full w-full object-contain"
+        /></span>
+      </div>
+
+      <div
+        class="flex w-full flex-col items-center justify-center gap-5 md:flex-row md:justify-between md:gap-12 lg:w-[90%]"
+      >
+        <div class="flex flex-col items-start justify-center gap-3 md:w-1/2">
+          <h1 class="text-4xl font-bold text-green-500 lg:text-5xl">
+            PolySense PULSE <br />
+          </h1>
+          <p class="lg:text-lg">
+            The PULSE is our unique additive manufacturing monitoring system.<br /><span
+              class="pt-1"
+              ><h2 class="text-lg text-green-200 lg:text-xl">
+                What The PULSE can do:
+              </h2>
+              - Detect when a build starts or stops <br />
+              - Predict build failures before they occur <br />
+              - Alert users via SMS when there are any failures or predicted
+              failure <br />
+              - Alert users when power is lost to the facility <br />
+              - Allow users to view a live HD video feed of the build chamber.
+            </span>
+          </p>
+        </div>
+        <span
+          class="flex h-40 w-[20rem] items-center justify-center overflow-hidden rounded-3xl bg-white md:h-60 md:w-1/2"
+        >
+          <img
+            src="assets/hardware-overview/polysense-pulse.png"
+            alt="PolySense ONE"
+            width="300"
+            height="200"
+            class="h-full w-full object-contain"
+        /></span>
+      </div>
+    </section>
+    <footer id="footer"></footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

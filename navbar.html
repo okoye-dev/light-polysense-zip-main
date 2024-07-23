@@ -1,0 +1,87 @@
+<body class="tracking-tight">
+  <nav
+    class="fixed top-0 z-[100] flex w-full items-center justify-between gap-10 overflow-hidden overflow-x-hidden bg-white/70 px-6 py-3 text-lg font-medium text-black shadow-sm shadow-[#4a336b]/10 backdrop-blur-lg sm:px-10 md:gap-4"
+  >
+    <a href="/">
+      <img
+        src="assets/navbar/polysense-logo-smalll.svg"
+        alt="logo"
+        width="150"
+        height="60"
+        class="w-32 lg:w-40"
+    /></a>
+    <a href="login.html" class="duration-300 ease-in-out"
+      ><button
+        type="button"
+        class="absolute right-[72px] top-4 flex items-center justify-center rounded-xl border border-green-700 bg-[#DAF7E5] px-4 py-2 text-sm font-medium text-green-700 duration-300 ease-in-out hover:rounded-md hover:bg-[#b2eec9] sm:right-24 md:hidden lg:px-6"
+      >
+        Login
+      </button></a
+    >
+    <img
+      onclick="openNav()"
+      src="assets/navbar/menu.svg"
+      alt="menu"
+      width="30"
+      height="30"
+      class="md:hidden"
+    />
+
+    <!-- Top Navigation -->
+    <ul
+      class="hidden w-[80%] items-center justify-center gap-6 pl-5 text-sm md:flex md:gap-[3vw] lg:gap-12 lg:text-base"
+    >
+      <li>
+        <a
+          href="index.html"
+          class="duration-300 ease-in-out hover:text-green-500"
+          >HOME</a
+        >
+      </li>
+      <li
+        onmouseover="slideIn()"
+        onmouseleave="slideOut()"
+        class="cursor-pointer duration-300 ease-in-out hover:text-green-500"
+      >
+        ABOUT
+      </li>
+      <li
+        onmouseover="slideSolutionsNavIn()"
+        onmouseleave="slideSolutionsNavOut()"
+        class="cursor-pointer duration-300 ease-in-out hover:text-green-500"
+      >
+        SOLUTIONS
+      </li>
+      <li>
+        <a
+          href="contact.html"
+          class="duration-300 ease-in-out hover:text-green-500"
+          >CONTACT</a
+        >
+      </li>
+
+      <li>
+        <a href="contact.html" class="duration-300 ease-in-out"
+          ><button
+            type="button"
+            class="flex items-center justify-center text-nowrap rounded-xl bg-green-500 px-4 py-2 text-white duration-300 ease-in-out hover:rounded-md hover:bg-green-400"
+          >
+            Request a demo
+          </button></a
+        >
+      </li>
+      <li>
+        <a href="login.html" class="duration-300 ease-in-out"
+          ><button
+            type="button"
+            class="flex items-center justify-center rounded-xl border border-green-700 bg-[#DAF7E5] px-4 py-2 text-sm font-medium text-green-700 duration-300 ease-in-out hover:rounded-md hover:bg-[#b2eec9] lg:px-6"
+          >
+            Login
+          </button></a
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <script src="main.js"></script>
+</body>
